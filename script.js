@@ -78,6 +78,7 @@ var translations = {
         'projects.caisse': 'Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.',
         'projects.internal': 'Projet interne',
         'projects.kidtrack': 'Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.',
+        'projects.fashionshop': 'Boutique de vêtements en ligne : panier, favoris, recherche instantanée, filtres, paiement simulé et suivi de commande.',
         'projects.view': 'Voir le site',
 
         'edu.tag': 'Formation',
@@ -190,6 +191,7 @@ var translations = {
         'projects.caisse': 'Modern, intuitive point-of-sale management application to optimize store operations.',
         'projects.internal': 'Internal project',
         'projects.kidtrack': 'Daycare management platform: daily child tracking, attendance, billing and parent communication.',
+        'projects.fashionshop': 'Online clothing store: cart, wishlist, instant search, filters, simulated payment and order tracking.',
         'projects.view': 'View site',
 
         'edu.tag': 'Education',
