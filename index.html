@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chokri Ben Mahjoub — Développeur Full Stack .NET / Vue.js</title>
-    <meta name="description" content="Portfolio de Chokri Ben Mahjoub, Développeur Full Stack à Sfax, Tunisie. Spécialisé en .NET, Vue.js, intégration Sage 100 et facturation électronique TTN.">
+    <meta name="description" content="Portfolio de Chokri Ben Mahjoub, Développeur Full Stack à Sfax, Tunisie. Spécialisé en .NET, Vue.js, intégration Sage 100 et facturation électronique TTN." id="metaDescription">
     <meta name="theme-color" content="#0a0e17">
 
     <!-- Open Graph -->
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 </head>
 <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -30,18 +31,28 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
+    <a class="whatsapp-float" id="whatsappFloat" href="#" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <nav class="navbar">
         <div class="max-width">
             <a href="#home" class="logo">Chokri<span>.dev</span></a>
             <ul class="menu">
-                <li><a href="#home" class="menu-link active-link">Accueil</a></li>
-                <li><a href="#about" class="menu-link">À propos</a></li>
-                <li><a href="#experience" class="menu-link">Parcours</a></li>
-                <li><a href="#skills" class="menu-link">Compétences</a></li>
-                <li><a href="#projects" class="menu-link">Projets</a></li>
-                <li><a href="#contact" class="menu-link">Contact</a></li>
+                <li><a href="#home" class="menu-link active-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#about" class="menu-link" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#experience" class="menu-link" data-i18n="nav.experience">Parcours</a></li>
+                <li><a href="#skills" class="menu-link" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="#projects" class="menu-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#contact" class="menu-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <a href="#contact" class="theme-btn nav-cta">Me contacter</a>
+            <div class="nav-right">
+                <button type="button" class="lang-toggle" id="langToggle" aria-label="Changer de langue / Switch language">
+                    <span class="lang-option" data-lang="fr">FR</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </button>
+                <a href="#contact" class="theme-btn nav-cta" data-i18n="nav.cta">Me contacter</a>
+            </div>
             <div class="menu-btn" aria-label="Ouvrir le menu">
                 <i class="fas fa-bars"></i>
             </div>
@@ -53,17 +64,17 @@
         <div class="home-bg" aria-hidden="true"></div>
         <div class="max-width">
             <div class="home-content" data-reveal>
-                <div class="text-1">👋 Bonjour, je suis</div>
+                <div class="text-1" data-i18n="home.greeting">👋 Bonjour, je suis</div>
                 <h1 class="text-2">Chokri Ben Mahjoub</h1>
-                <div class="text-3">Je suis <span class="typing"></span></div>
-                <p class="home-desc">Développeur Full Stack passionné par la résolution de problèmes complexes.
+                <div class="text-3"><span data-i18n="home.imPrefix">Je suis</span> <span class="typing"></span></div>
+                <p class="home-desc" data-i18n="home.desc">Développeur Full Stack passionné par la résolution de problèmes complexes.
                     Expérimenté en développement .NET, applications de gestion Sage et intégration de passerelles
                     de facturation électronique connectées à TTN.</p>
                 <div class="home-btns">
-                    <a href="#contact" class="theme-btn">Me contacter</a>
+                    <a href="#contact" class="theme-btn" data-i18n="home.contactBtn">Me contacter</a>
                     <div class="cv-dropdown">
                         <a href="#" class="ghost-btn">
-                            <i class="las la-download"></i> Télécharger CV <i class="fas fa-caret-down"></i>
+                            <i class="las la-download"></i> <span data-i18n="home.cvBtn">Télécharger CV</span> <i class="fas fa-caret-down"></i>
                         </a>
                         <div class="cv-dropdown-menu">
                             <a href="assets/CV-Chokri-Ben-Mahjoub-FR.pdf" download>🇫🇷 Version Française</a>
@@ -74,6 +85,7 @@
                 <div class="home-socials">
                     <a href="https://github.com/chokri-ben-mahjoub" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/chokri-ben-mahjoub" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="js-whatsapp-link" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="mailto:chokribenmahjoub@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
@@ -84,8 +96,8 @@
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="max-width">
-            <span class="section-tag" data-reveal>À propos</span>
-            <h2 class="title" data-reveal>Qui suis-je ?</h2>
+            <span class="section-tag" data-reveal data-i18n="about.tag">À propos</span>
+            <h2 class="title" data-reveal data-i18n="about.title">Qui suis-je ?</h2>
             <div class="about-content">
                 <div class="column left" data-reveal>
                     <div class="img-wrap">
@@ -93,29 +105,29 @@
                     </div>
                 </div>
                 <div class="column right" data-reveal>
-                    <div class="text">Développeur Full Stack basé à <span>Sfax, Tunisie</span></div>
-                    <p>Polyvalent et autonome, j'interviens aussi bien sur le frontend que le backend, en m'adaptant
+                    <div class="text" data-i18n-html="about.headline">Développeur Full Stack basé à <span>Sfax, Tunisie</span></div>
+                    <p data-i18n="about.desc">Polyvalent et autonome, j'interviens aussi bien sur le frontend que le backend, en m'adaptant
                         rapidement aux différents contextes métier et technologies. Motivé par la recherche de
                         solutions innovantes, je m'investis pleinement dans chaque projet pour livrer des résultats
                         concrets et de qualité.</p>
                     <div class="about-stats">
                         <div class="stat">
                             <div class="stat-num">4+</div>
-                            <div class="stat-label">Ans d'expérience</div>
+                            <div class="stat-label" data-i18n="about.stat.years">Ans d'expérience</div>
                         </div>
                         <div class="stat">
                             <div class="stat-num">4</div>
-                            <div class="stat-label">Entreprises</div>
+                            <div class="stat-label" data-i18n="about.stat.companies">Entreprises</div>
                         </div>
                         <div class="stat">
                             <div class="stat-num">20+</div>
-                            <div class="stat-label">Technologies maîtrisées</div>
+                            <div class="stat-label" data-i18n="about.stat.tech">Technologies maîtrisées</div>
                         </div>
                     </div>
                     <div class="home-btns">
                         <div class="cv-dropdown">
                             <a href="#" class="theme-btn">
-                                <i class="las la-download"></i> Télécharger mon CV <i class="fas fa-caret-down"></i>
+                                <i class="las la-download"></i> <span data-i18n="about.cvBtn">Télécharger mon CV</span> <i class="fas fa-caret-down"></i>
                             </a>
                             <div class="cv-dropdown-menu">
                                 <a href="assets/CV-Chokri-Ben-Mahjoub-FR.pdf" download>🇫🇷 Version Française</a>
@@ -131,21 +143,21 @@
     <!-- EXPERIENCE -->
     <section class="experience" id="experience">
         <div class="max-width">
-            <span class="section-tag" data-reveal>Parcours</span>
-            <h2 class="title" data-reveal>Expérience professionnelle</h2>
+            <span class="section-tag" data-reveal data-i18n="exp.tag">Parcours</span>
+            <h2 class="title" data-reveal data-i18n="exp.title">Expérience professionnelle</h2>
             <div class="timeline">
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
-                        <span class="badge-current">Poste actuel</span>
-                        <div class="tl-date">Janv. 2024 – Présent</div>
-                        <h3>Développeur Full Stack</h3>
-                        <div class="tl-company">APBS Groupe — Intégrateur de Solutions de Gestion Sage, Sfax</div>
+                        <span class="badge-current" data-i18n="exp.current">Poste actuel</span>
+                        <div class="tl-date" data-i18n="exp.0.date">Janv. 2024 – Présent</div>
+                        <h3 data-i18n="exp.0.role">Développeur Full Stack</h3>
+                        <div class="tl-company" data-i18n="exp.0.company">APBS Groupe — Intégrateur de Solutions de Gestion Sage, Sfax</div>
                         <ul>
-                            <li>Développement web .NET au sein du secteur Sage : applications de gestion commerciale, stock, comptabilité, production.</li>
-                            <li>Implémentation d'une passerelle de facturation électronique connectée à TTN (Tunisia TradeNet).</li>
-                            <li>Conception d'interfaces interactives et ergonomiques avec Vue.js et PrimeVue.</li>
-                            <li>Reporting avec Metabase et automatisation des workflows avec n8n.</li>
+                            <li data-i18n="exp.0.b0">Développement web .NET au sein du secteur Sage : applications de gestion commerciale, stock, comptabilité, production.</li>
+                            <li data-i18n="exp.0.b1">Implémentation d'une passerelle de facturation électronique connectée à TTN (Tunisia TradeNet).</li>
+                            <li data-i18n="exp.0.b2">Conception d'interfaces interactives et ergonomiques avec Vue.js et PrimeVue.</li>
+                            <li data-i18n="exp.0.b3">Reporting avec Metabase et automatisation des workflows avec n8n.</li>
                         </ul>
                         <div class="tl-tags">
                             <span>Vue.js</span><span>.NET (C#)</span><span>SQL Server</span><span>PostgreSQL</span><span>PrimeVue</span><span>Docker</span>
@@ -155,13 +167,13 @@
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
-                        <div class="tl-date">Déc. 2022 – Déc. 2023</div>
-                        <h3>Développeur Full Stack</h3>
-                        <div class="tl-company">Infotech Consulting Services (ICS), Sfax</div>
+                        <div class="tl-date" data-i18n="exp.1.date">Déc. 2022 – Déc. 2023</div>
+                        <h3 data-i18n="exp.1.role">Développeur Full Stack</h3>
+                        <div class="tl-company" data-i18n="exp.1.company">Infotech Consulting Services (ICS), Sfax</div>
                         <ul>
-                            <li>Création de nouvelles API REST, tests et validation avec Postman.</li>
-                            <li>Développement de services backend pour supporter les fonctionnalités métier.</li>
-                            <li>Création d'interfaces frontend pour améliorer l'expérience utilisateur.</li>
+                            <li data-i18n="exp.1.b0">Création de nouvelles API REST, tests et validation avec Postman.</li>
+                            <li data-i18n="exp.1.b1">Développement de services backend pour supporter les fonctionnalités métier.</li>
+                            <li data-i18n="exp.1.b2">Création d'interfaces frontend pour améliorer l'expérience utilisateur.</li>
                         </ul>
                         <div class="tl-tags">
                             <span>Laravel</span><span>Nuxt.js</span><span>Vue.js 3</span><span>MySQL</span><span>Docker</span>
@@ -171,12 +183,12 @@
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
-                        <div class="tl-date">Nov. 2021 – Sep. 2022</div>
-                        <h3>Développeur</h3>
-                        <div class="tl-company">Logicom, Sfax</div>
+                        <div class="tl-date" data-i18n="exp.2.date">Nov. 2021 – Sep. 2022</div>
+                        <h3 data-i18n="exp.2.role">Développeur</h3>
+                        <div class="tl-company" data-i18n="exp.2.company">Logicom, Sfax</div>
                         <ul>
-                            <li>Suivi et traitement des réclamations clients, développement sur les modules ERP (gestion commerciale, stocks, production, caisse).</li>
-                            <li>Tests et déploiement d'états Crystal Report.</li>
+                            <li data-i18n="exp.2.b0">Suivi et traitement des réclamations clients, développement sur les modules ERP (gestion commerciale, stocks, production, caisse).</li>
+                            <li data-i18n="exp.2.b1">Tests et déploiement d'états Crystal Report.</li>
                         </ul>
                         <div class="tl-tags">
                             <span>C#</span><span>Visual Basic</span><span>Crystal Report</span><span>SQL</span><span>PHP</span>
@@ -186,11 +198,11 @@
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
-                        <div class="tl-date">Fév. 2020 – Juil. 2020</div>
-                        <h3>Stagiaire (Projet de fin d'études)</h3>
-                        <div class="tl-company">Leader Tec Engineering, Sfax</div>
+                        <div class="tl-date" data-i18n="exp.3.date">Fév. 2020 – Juil. 2020</div>
+                        <h3 data-i18n="exp.3.role">Stagiaire (Projet de fin d'études)</h3>
+                        <div class="tl-company" data-i18n="exp.3.company">Leader Tec Engineering, Sfax</div>
                         <ul>
-                            <li>Développement d'une application de gestion de stock : fournisseurs, commandes clients, produits, factures, devis.</li>
+                            <li data-i18n="exp.3.b0">Développement d'une application de gestion de stock : fournisseurs, commandes clients, produits, factures, devis.</li>
                         </ul>
                         <div class="tl-tags">
                             <span>PHP</span><span>Java</span><span>JavaScript</span><span>Bootstrap</span><span>Android Studio</span>
@@ -204,47 +216,47 @@
     <!-- SKILLS -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <span class="section-tag" data-reveal>Compétences</span>
-            <h2 class="title" data-reveal>Stack technique</h2>
+            <span class="section-tag" data-reveal data-i18n="skills.tag">Compétences</span>
+            <h2 class="title" data-reveal data-i18n="skills.title">Stack technique</h2>
             <div class="skills-grid">
                 <div class="skill-card" data-reveal>
                     <i class="fas fa-display skill-icon"></i>
-                    <h3>Frontend</h3>
+                    <h3 data-i18n="skills.frontend">Frontend</h3>
                     <div class="tag-cloud">
                         <span>Vue.js</span><span>Nuxt.js</span><span>React.js</span><span>Blazor</span><span>PrimeVue</span><span>DevExpress</span><span>JavaScript</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <i class="fas fa-server skill-icon"></i>
-                    <h3>Backend</h3>
+                    <h3 data-i18n="skills.backend">Backend</h3>
                     <div class="tag-cloud">
                         <span>.NET (C#)</span><span>PHP / Laravel</span><span>Symfony</span><span>Java / J2EE</span><span>Python</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <i class="fas fa-database skill-icon"></i>
-                    <h3>Bases de données</h3>
+                    <h3 data-i18n="skills.db">Bases de données</h3>
                     <div class="tag-cloud">
                         <span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <i class="fas fa-cubes skill-icon"></i>
-                    <h3>ERP &amp; Intégration</h3>
+                    <h3 data-i18n="skills.erp">ERP &amp; Intégration</h3>
                     <div class="tag-cloud">
                         <span>Sage 100</span><span>Facturation électronique TTN</span><span>Odoo</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <i class="fas fa-toolbox skill-icon"></i>
-                    <h3>Outils &amp; DevOps</h3>
+                    <h3 data-i18n="skills.tools">Outils &amp; DevOps</h3>
                     <div class="tag-cloud">
                         <span>Docker</span><span>Git</span><span>Postman</span><span>JIRA</span><span>Crystal Report</span>
                     </div>
                 </div>
                 <div class="skill-card" data-reveal>
                     <i class="fas fa-chart-line skill-icon"></i>
-                    <h3>Data &amp; Automatisation</h3>
+                    <h3 data-i18n="skills.data">Data &amp; Automatisation</h3>
                     <div class="tag-cloud">
                         <span>Metabase</span><span>n8n</span><span>Big Data</span><span>Hadoop</span>
                     </div>
@@ -256,32 +268,32 @@
     <!-- PROJECTS -->
     <section class="projects" id="projects">
         <div class="max-width">
-            <span class="section-tag" data-reveal>Réalisations</span>
-            <h2 class="title" data-reveal>Projets</h2>
+            <span class="section-tag" data-reveal data-i18n="projects.tag">Réalisations</span>
+            <h2 class="title" data-reveal data-i18n="projects.title">Projets</h2>
             <div class="projects-grid">
                 <div class="project-card" data-reveal>
                     <div class="project-icon"><i class="fas fa-bus"></i></div>
                     <h3>SRTK</h3>
-                    <p>Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).</p>
-                    <a href="https://srtk.com.tn/" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <p data-i18n="projects.srtk">Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).</p>
+                    <a href="https://srtk.com.tn/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
                 <div class="project-card" data-reveal>
                     <div class="project-icon"><i class="fas fa-diagram-project"></i></div>
                     <h3>AP Business Hub</h3>
-                    <p>Solution complémentaire à Sage 100 Gestion Commerciale offrant un accès moderne, ergonomique et sécurisé pour digitaliser les processus de vente.</p>
-                    <a href="https://www.apbusinesssoft.com/ap-b-hub/" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <p data-i18n="projects.bhub">Solution complémentaire à Sage 100 Gestion Commerciale offrant un accès moderne, ergonomique et sécurisé pour digitaliser les processus de vente.</p>
+                    <a href="https://www.apbusinesssoft.com/ap-b-hub/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
                 <div class="project-card" data-reveal>
                     <div class="project-icon"><i class="fas fa-cash-register"></i></div>
-                    <h3>Gestion de Caisse</h3>
-                    <p>Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.</p>
-                    <span class="project-tag-internal">Projet interne</span>
+                    <h3 data-i18n="projects.caisse.title">Gestion de Caisse</h3>
+                    <p data-i18n="projects.caisse">Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.</p>
+                    <span class="project-tag-internal" data-i18n="projects.internal">Projet interne</span>
                 </div>
                 <div class="project-card" data-reveal>
                     <div class="project-icon"><i class="fas fa-baby"></i></div>
                     <h3>KidTrack</h3>
-                    <p>Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.</p>
-                    <a href="https://kid-track.vercel.app" target="_blank" rel="noopener">Voir le site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <p data-i18n="projects.kidtrack">Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.</p>
+                    <a href="https://kid-track.vercel.app" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -290,51 +302,51 @@
     <!-- EDUCATION -->
     <section class="education" id="education">
         <div class="max-width">
-            <span class="section-tag" data-reveal>Formation</span>
-            <h2 class="title" data-reveal>Études &amp; Langues</h2>
+            <span class="section-tag" data-reveal data-i18n="edu.tag">Formation</span>
+            <h2 class="title" data-reveal data-i18n="edu.title">Études &amp; Langues</h2>
             <div class="edu-content">
                 <div class="edu-list" data-reveal>
                     <div class="edu-item">
                         <i class="fas fa-graduation-cap"></i>
                         <div>
-                            <h3>Master en Développement des Systèmes Informatiques et Réseaux</h3>
-                            <p>ISET Sfax — Génie Logiciel et Nouvelles Technologies</p>
+                            <h3 data-i18n="edu.0.title">Master en Développement des Systèmes Informatiques et Réseaux</h3>
+                            <p data-i18n="edu.0.school">ISET Sfax — Génie Logiciel et Nouvelles Technologies</p>
                             <span>Nov. 2022 – Déc. 2024</span>
                         </div>
                     </div>
                     <div class="edu-item">
                         <i class="fas fa-graduation-cap"></i>
                         <div>
-                            <h3>Licence Fondamentale en Informatique</h3>
-                            <p>ISIMS Sfax — Institut Supérieur d'Informatique et Multimédia</p>
+                            <h3 data-i18n="edu.1.title">Licence Fondamentale en Informatique</h3>
+                            <p data-i18n="edu.1.school">ISIMS Sfax — Institut Supérieur d'Informatique et Multimédia</p>
                             <span>Sep. 2017 – Juin 2020</span>
                         </div>
                     </div>
                     <div class="edu-item">
                         <i class="fas fa-graduation-cap"></i>
                         <div>
-                            <h3>Baccalauréat en Mathématiques</h3>
+                            <h3 data-i18n="edu.2.title">Baccalauréat en Mathématiques</h3>
                             <p>Lycée Majida Boulila, Sfax</p>
                             <span>Sep. 2012 – Juil. 2017</span>
                         </div>
                     </div>
                 </div>
                 <div class="edu-languages" data-reveal>
-                    <h3>Langues</h3>
+                    <h3 data-i18n="edu.languages">Langues</h3>
                     <div class="lang-item">
-                        <span>Arabe</span>
+                        <span data-i18n="edu.lang.ar">Arabe</span>
                         <div class="lang-bar"><div style="width:100%"></div></div>
-                        <span class="lang-level">Langue maternelle</span>
+                        <span class="lang-level" data-i18n="edu.lang.arLevel">Langue maternelle</span>
                     </div>
                     <div class="lang-item">
-                        <span>Français</span>
+                        <span data-i18n="edu.lang.fr">Français</span>
                         <div class="lang-bar"><div style="width:90%"></div></div>
-                        <span class="lang-level">Courant</span>
+                        <span class="lang-level" data-i18n="edu.lang.frLevel">Courant</span>
                     </div>
                     <div class="lang-item">
-                        <span>Anglais</span>
+                        <span data-i18n="edu.lang.en">Anglais</span>
                         <div class="lang-bar"><div style="width:65%"></div></div>
-                        <span class="lang-level">Intermédiaire</span>
+                        <span class="lang-level" data-i18n="edu.lang.enLevel">Intermédiaire</span>
                     </div>
                 </div>
             </div>
@@ -344,32 +356,39 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="max-width">
-            <span class="section-tag" data-reveal>Contact</span>
-            <h2 class="title" data-reveal>Discutons de votre projet</h2>
+            <span class="section-tag" data-reveal data-i18n="contact.tag">Contact</span>
+            <h2 class="title" data-reveal data-i18n="contact.title">Discutons de votre projet</h2>
             <div class="contact-content">
                 <div class="column left" data-reveal>
-                    <div class="text">Restons en contact</div>
-                    <p>Rigoureux, dynamique, aussi à l'aise en autonomie qu'en équipe, je suis convaincu du bénéfice
+                    <div class="text" data-i18n="contact.headline">Restons en contact</div>
+                    <p data-i18n="contact.desc">Rigoureux, dynamique, aussi à l'aise en autonomie qu'en équipe, je suis convaincu du bénéfice
                         mutuel d'une future collaboration entre votre entreprise et moi.</p>
                     <div class="icons">
                         <div class="row">
                             <i class="fas fa-envelope"></i>
                             <div class="info">
-                                <div class="head">Email</div>
+                                <div class="head" data-i18n="contact.email">Email</div>
                                 <div class="sub-title"><a href="mailto:chokribenmahjoub@gmail.com">chokribenmahjoub@gmail.com</a></div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-phone"></i>
                             <div class="info">
-                                <div class="head">Téléphone</div>
+                                <div class="head" data-i18n="contact.phone">Téléphone</div>
                                 <div class="sub-title"><a href="tel:+21695636012">+216 95 636 012</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="info">
+                                <div class="head">WhatsApp</div>
+                                <div class="sub-title"><a href="#" class="js-whatsapp-link" target="_blank" rel="noopener">+216 95 636 012</a></div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="info">
-                                <div class="head">Localisation</div>
+                                <div class="head" data-i18n="contact.location">Localisation</div>
                                 <div class="sub-title">Sfax, Tunisie</div>
                             </div>
                         </div>
@@ -388,9 +407,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="qr-card">
+                        <div id="whatsappQr" class="qr-code"></div>
+                        <div class="qr-caption">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-i18n="contact.qrCaption">Scannez pour discuter sur WhatsApp</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="column right" data-reveal>
-                    <div class="text">Envoyez-moi un message</div>
+                    <div class="text" data-i18n="contact.formTitle">Envoyez-moi un message</div>
                     <form id="contactForm">
                         <!-- Clé d'accès Web3Forms : à remplacer par la tienne (gratuite, sans compte) sur https://web3forms.com -->
                         <input type="hidden" name="access_key" value="287d2f9c-4b9e-4db3-82ed-aafa5376ff85">
@@ -400,20 +426,20 @@
 
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" name="name" placeholder="Nom" required>
+                                <input type="text" name="name" data-i18n-placeholder="contact.form.name" placeholder="Nom" required>
                             </div>
                             <div class="field email">
                                 <input type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" name="objet" placeholder="Objet" required>
+                            <input type="text" name="objet" data-i18n-placeholder="contact.form.subject" placeholder="Objet" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" name="message" placeholder="Votre message..." required></textarea>
+                            <textarea cols="30" rows="10" name="message" data-i18n-placeholder="contact.form.message" placeholder="Votre message..." required></textarea>
                         </div>
                         <div class="button-area">
-                            <button type="submit"><span>Envoyer le message</span> <i class="fas fa-paper-plane"></i></button>
+                            <button type="submit"><span data-i18n="contact.form.send">Envoyer le message</span> <i class="fas fa-paper-plane"></i></button>
                             <span id="formResult"></span>
                         </div>
                     </form>
@@ -424,7 +450,7 @@
 
     <footer>
         <div class="max-width">
-            <span>Conçu &amp; développé par <a href="https://github.com/chokri-ben-mahjoub" target="_blank" rel="noopener">Chokri Ben Mahjoub</a> — <span class="far fa-copyright"></span> <span id="year"></span></span>
+            <span><span data-i18n="footer.text">Conçu &amp; développé par</span> <a href="https://github.com/chokri-ben-mahjoub" target="_blank" rel="noopener">Chokri Ben Mahjoub</a> — <span class="far fa-copyright"></span> <span id="year"></span></span>
         </div>
     </footer>
 
