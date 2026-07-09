@@ -66,9 +66,9 @@ var translations = {
         'skills.frontend': 'Frontend',
         'skills.backend': 'Backend',
         'skills.db': 'Bases de données',
-        'skills.erp': 'ERP &amp; Intégration',
-        'skills.tools': 'Outils &amp; DevOps',
-        'skills.data': 'Data &amp; Automatisation',
+        'skills.erp': 'ERP & Intégration',
+        'skills.tools': 'Outils & DevOps',
+        'skills.data': 'Data & Automatisation',
 
         'projects.tag': 'Réalisations',
         'projects.title': 'Projets',
@@ -82,7 +82,7 @@ var translations = {
         'projects.view': 'Voir le site',
 
         'edu.tag': 'Formation',
-        'edu.title': 'Études &amp; Langues',
+        'edu.title': 'Études & Langues',
         'edu.0.title': 'Master en Développement des Systèmes Informatiques et Réseaux',
         'edu.0.school': 'ISET Sfax — Génie Logiciel et Nouvelles Technologies',
         'edu.1.title': 'Licence Fondamentale en Informatique',
@@ -110,7 +110,7 @@ var translations = {
         'contact.form.message': 'Votre message...',
         'contact.form.send': 'Envoyer le message',
 
-        'footer.text': 'Conçu &amp; développé par',
+        'footer.text': 'Conçu & développé par',
 
         'whatsapp.message': 'Bonjour Chokri, je vous contacte depuis votre portfolio.',
 
@@ -179,9 +179,9 @@ var translations = {
         'skills.frontend': 'Frontend',
         'skills.backend': 'Backend',
         'skills.db': 'Databases',
-        'skills.erp': 'ERP &amp; Integration',
-        'skills.tools': 'Tools &amp; DevOps',
-        'skills.data': 'Data &amp; Automation',
+        'skills.erp': 'ERP & Integration',
+        'skills.tools': 'Tools & DevOps',
+        'skills.data': 'Data & Automation',
 
         'projects.tag': 'Achievements',
         'projects.title': 'Projects',
@@ -195,7 +195,7 @@ var translations = {
         'projects.view': 'View site',
 
         'edu.tag': 'Education',
-        'edu.title': 'Education &amp; Languages',
+        'edu.title': 'Education & Languages',
         'edu.0.title': "Master's in Information Systems and Network Development",
         'edu.0.school': 'ISET Sfax — Software Engineering and New Technologies',
         'edu.1.title': "Bachelor's Degree in Computer Science",
@@ -223,7 +223,7 @@ var translations = {
         'contact.form.message': 'Your message...',
         'contact.form.send': 'Send message',
 
-        'footer.text': 'Designed &amp; built by',
+        'footer.text': 'Designed & built by',
 
         'whatsapp.message': "Hello Chokri, I'm reaching out from your portfolio.",
 
