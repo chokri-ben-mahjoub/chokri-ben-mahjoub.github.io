@@ -79,6 +79,7 @@ var translations = {
         'projects.kidtrack': 'Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.',
         'projects.fashionshop': 'Boutique de vêtements en ligne : panier, favoris, recherche instantanée, filtres, paiement simulé et suivi de commande.',
         'projects.urbn': 'Site e-commerce streetwear au design minimaliste et éditorial : catalogue, fiche produit, panier, tunnel de commande et espace client.',
+        'projects.taskflow': 'Tableau Kanban moderne avec drag & drop, tags, sous-tâches, palette de commandes, ajout rapide en langage naturel et tâches récurrentes.',
         'projects.view': 'Voir le site',
 
         'edu.tag': 'Formation',
@@ -192,6 +193,7 @@ var translations = {
         'projects.kidtrack': 'Daycare management platform: daily child tracking, attendance, billing and parent communication.',
         'projects.fashionshop': 'Online clothing store: cart, wishlist, instant search, filters, simulated payment and order tracking.',
         'projects.urbn': 'Minimalist, editorial-style streetwear e-commerce site: catalog, product page, cart, checkout flow and customer account.',
+        'projects.taskflow': 'Modern Kanban board with drag & drop, tags, subtasks, command palette, natural-language quick add and recurring tasks.',
         'projects.view': 'View site',
 
         'edu.tag': 'Education',
