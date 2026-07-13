@@ -64,6 +64,11 @@
         <div class="home-bg" aria-hidden="true"></div>
         <div class="max-width">
             <div class="home-content" data-reveal>
+                <div class="home-bg-text" aria-hidden="true">CBM</div>
+                <div class="status-badge">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span data-i18n="home.available">Disponible pour de nouvelles opportunités</span>
+                </div>
                 <div class="text-1" data-i18n="home.greeting">👋 Bonjour, je suis</div>
                 <h1 class="text-2">Chokri Ben Mahjoub</h1>
                 <div class="text-3"><span data-i18n="home.imPrefix">Je suis</span> <span class="typing"></span></div>
@@ -142,6 +147,7 @@
 
     <!-- EXPERIENCE -->
     <section class="experience" id="experience">
+        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
         <div class="max-width">
             <span class="section-tag" data-reveal data-i18n="exp.tag">Parcours</span>
             <h2 class="title" data-reveal data-i18n="exp.title">Expérience professionnelle</h2>
@@ -215,46 +221,53 @@
 
     <!-- SKILLS -->
     <section class="skills" id="skills">
+        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
         <div class="max-width">
             <span class="section-tag" data-reveal data-i18n="skills.tag">Compétences</span>
             <h2 class="title" data-reveal data-i18n="skills.title">Stack technique</h2>
             <div class="skills-grid">
-                <div class="skill-card" data-reveal>
+                <div class="skill-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-display skill-icon"></i>
                     <h3 data-i18n="skills.frontend">Frontend</h3>
                     <div class="tag-cloud">
                         <span>Vue.js</span><span>Nuxt.js</span><span>React.js</span><span>Blazor</span><span>PrimeVue</span><span>DevExpress</span><span>JavaScript</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
+                <div class="skill-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-server skill-icon"></i>
                     <h3 data-i18n="skills.backend">Backend</h3>
                     <div class="tag-cloud">
                         <span>.NET (C#)</span><span>PHP / Laravel</span><span>Symfony</span><span>Java / J2EE</span><span>Python</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
+                <div class="skill-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-database skill-icon"></i>
                     <h3 data-i18n="skills.db">Bases de données</h3>
                     <div class="tag-cloud">
                         <span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
+                <div class="skill-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-cubes skill-icon"></i>
                     <h3 data-i18n="skills.erp">ERP &amp; Intégration</h3>
                     <div class="tag-cloud">
                         <span>Sage 100</span><span>Facturation électronique TTN</span><span>Odoo</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
+                <div class="skill-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-toolbox skill-icon"></i>
                     <h3 data-i18n="skills.tools">Outils &amp; DevOps</h3>
                     <div class="tag-cloud">
                         <span>Docker</span><span>Git</span><span>Postman</span><span>JIRA</span><span>Crystal Report</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal>
+                <div class="skill-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-chart-line skill-icon"></i>
                     <h3 data-i18n="skills.data">Data &amp; Automatisation</h3>
                     <div class="tag-cloud">
@@ -267,41 +280,51 @@
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
+        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
         <div class="max-width">
             <span class="section-tag" data-reveal data-i18n="projects.tag">Réalisations</span>
             <h2 class="title" data-reveal data-i18n="projects.title">Projets</h2>
             <div class="projects-grid">
-                <div class="project-card" data-reveal>
+                <div class="project-card featured" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-bus"></i></div>
-                    <h3>SRTK</h3>
-                    <p data-i18n="projects.srtk">Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).</p>
-                    <a href="https://srtk.com.tn/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <div class="project-body">
+                        <span class="featured-tag" data-i18n="projects.featured">Client officiel</span>
+                        <h3>SRTK</h3>
+                        <p data-i18n="projects.srtk">Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).</p>
+                        <a href="https://srtk.com.tn/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-cash-register"></i></div>
                     <h3 data-i18n="projects.caisse.title">Gestion de Caisse</h3>
                     <p data-i18n="projects.caisse">Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.</p>
                     <span class="project-tag-internal" data-i18n="projects.internal">Projet interne</span>
                 </div>
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-baby"></i></div>
                     <h3>KidTrack</h3>
                     <p data-i18n="projects.kidtrack">Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.</p>
                     <a href="https://kid-track.vercel.app" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-bag-shopping"></i></div>
                     <h3>FashionShop</h3>
                     <p data-i18n="projects.fashionshop">Boutique de vêtements en ligne : panier, favoris, recherche instantanée, filtres, paiement simulé et suivi de commande.</p>
                     <a href="https://chokri-ben-mahjoub-fashion-shop-jbc.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-shirt"></i></div>
                     <h3>URBN.</h3>
                     <p data-i18n="projects.urbn">Site e-commerce streetwear au design minimaliste et éditorial : catalogue, fiche produit, panier, tunnel de commande et espace client.</p>
                     <a href="https://streetwear-collective.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card" data-reveal>
+                <div class="project-card" data-reveal data-tilt>
+                    <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-table-columns"></i></div>
                     <h3>TaskFlow</h3>
                     <p data-i18n="projects.taskflow">Tableau Kanban moderne avec drag & drop, tags, sous-tâches, palette de commandes, ajout rapide en langage naturel et tâches récurrentes.</p>
@@ -313,6 +336,7 @@
 
     <!-- EDUCATION -->
     <section class="education" id="education">
+        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
         <div class="max-width">
             <span class="section-tag" data-reveal data-i18n="edu.tag">Formation</span>
             <h2 class="title" data-reveal data-i18n="edu.title">Études &amp; Langues</h2>
@@ -367,6 +391,7 @@
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
+        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
         <div class="max-width">
             <span class="section-tag" data-reveal data-i18n="contact.tag">Contact</span>
             <h2 class="title" data-reveal data-i18n="contact.title">Discutons de votre projet</h2>

@@ -19,6 +19,7 @@ var translations = {
         'nav.contact': 'Contact',
         'nav.cta': 'Me contacter',
 
+        'home.available': 'Disponible pour de nouvelles opportunités',
         'home.greeting': '👋 Bonjour, je suis',
         'home.imPrefix': 'Je suis',
         'home.typed': ['Développeur Full Stack', 'Développeur .NET / C#', 'Développeur Vue.js', 'Intégrateur Sage 100'],
@@ -72,6 +73,7 @@ var translations = {
 
         'projects.tag': 'Réalisations',
         'projects.title': 'Projets',
+        'projects.featured': 'Client officiel',
         'projects.srtk': 'Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).',
         'projects.caisse.title': 'Gestion de Caisse',
         'projects.caisse': 'Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.',
@@ -133,6 +135,7 @@ var translations = {
         'nav.contact': 'Contact',
         'nav.cta': 'Contact me',
 
+        'home.available': 'Available for new opportunities',
         'home.greeting': "👋 Hi, I'm",
         'home.imPrefix': "I'm a",
         'home.typed': ['Full Stack Developer', '.NET / C# Developer', 'Vue.js Developer', 'Sage 100 Integrator'],
@@ -186,6 +189,7 @@ var translations = {
 
         'projects.tag': 'Achievements',
         'projects.title': 'Projects',
+        'projects.featured': 'Official client',
         'projects.srtk': 'Dynamic web application developed for the Sfax Regional Transport Company (SRTK).',
         'projects.caisse.title': 'Point of Sale Management',
         'projects.caisse': 'Modern, intuitive point-of-sale management application to optimize store operations.',
@@ -366,6 +370,28 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('mousemove', function (e) {
             cursorGlow.style.left = e.clientX + 'px';
             cursorGlow.style.top = e.clientY + 'px';
+        });
+    }
+
+    // ---- tilt + spotlight micro-interaction on [data-tilt] cards (desktop only) ----
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (window.matchMedia('(pointer: fine)').matches && !reduceMotion) {
+        var tiltEls = document.querySelectorAll('[data-tilt]');
+        tiltEls.forEach(function (el) {
+            el.addEventListener('mousemove', function (e) {
+                var rect = el.getBoundingClientRect();
+                var px = (e.clientX - rect.left) / rect.width;
+                var py = (e.clientY - rect.top) / rect.height;
+                var maxTilt = 6;
+                el.style.setProperty('--rx', ((0.5 - py) * maxTilt * 2).toFixed(2) + 'deg');
+                el.style.setProperty('--ry', ((px - 0.5) * maxTilt * 2).toFixed(2) + 'deg');
+                el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+                el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+            });
+            el.addEventListener('mouseleave', function () {
+                el.style.setProperty('--rx', '0deg');
+                el.style.setProperty('--ry', '0deg');
+            });
         });
     }
 
