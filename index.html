@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chokri Ben Mahjoub — Développeur Full Stack .NET / Vue.js</title>
     <meta name="description" content="Portfolio de Chokri Ben Mahjoub, Développeur Full Stack à Sfax, Tunisie. Spécialisé en .NET, Vue.js, intégration Sage 100 et facturation électronique TTN." id="metaDescription">
-    <meta name="theme-color" content="#0a0e17">
+    <meta name="theme-color" content="#050a14">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -14,11 +14,11 @@
     <meta property="og:image" content="https://chokri-ben-mahjoub.github.io/images/profile-1.jpg">
     <meta property="og:url" content="https://chokri-ben-mahjoub.github.io/">
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='100%25' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='700' fill='white' text-anchor='middle'%3ECB%3C/text%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%231e90ff'/%3E%3Cstop offset='100%25' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='700' fill='white' text-anchor='middle'%3ECB%3C/text%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -26,7 +26,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
 </head>
 <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
     <div class="scroll-up-btn" aria-label="Remonter en haut">
         <i class="fas fa-arrow-up"></i>
     </div>
@@ -35,51 +34,88 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <nav class="navbar">
-        <div class="max-width">
-            <a href="#home" class="logo">Chokri<span>.dev</span></a>
-            <ul class="menu">
-                <li><a href="#home" class="menu-link active-link" data-i18n="nav.home">Accueil</a></li>
-                <li><a href="#about" class="menu-link" data-i18n="nav.about">À propos</a></li>
-                <li><a href="#experience" class="menu-link" data-i18n="nav.experience">Parcours</a></li>
-                <li><a href="#skills" class="menu-link" data-i18n="nav.skills">Compétences</a></li>
-                <li><a href="#projects" class="menu-link" data-i18n="nav.projects">Projets</a></li>
-                <li><a href="#contact" class="menu-link" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <button type="button" class="lang-toggle" id="langToggle" aria-label="Changer de langue / Switch language">
-                    <span class="lang-option" data-lang="fr">FR</span>
-                    <span class="lang-option" data-lang="en">EN</span>
-                </button>
-                <a href="#contact" class="theme-btn nav-cta" data-i18n="nav.cta">Me contacter</a>
+    <button type="button" class="sidebar-toggle" id="sidebarToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-avatar">
+                <img src="images/profile-1.jpg" alt="Photo de Chokri Ben Mahjoub">
+                <span class="status-indicator" aria-hidden="true"></span>
             </div>
-            <div class="menu-btn" aria-label="Ouvrir le menu">
-                <i class="fas fa-bars"></i>
+            <h1 class="sidebar-name">Chokri Ben Mahjoub</h1>
+            <p class="sidebar-role" data-i18n="hero.role">Développeur Full Stack</p>
+
+            <div class="sidebar-socials">
+                <a href="https://github.com/chokri-ben-mahjoub" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/chokri-ben-mahjoub" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="js-whatsapp-link" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:chokribenmahjoub@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-    </nav>
 
-    <!-- HOME -->
-    <section class="home" id="home">
-        <div class="home-bg" aria-hidden="true"></div>
-        <div class="max-width">
-            <div class="home-content" data-reveal>
-                <div class="home-bg-text" aria-hidden="true">CBM</div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="#home" class="sidebar-link active-link" data-section="home"><i class="fas fa-house"></i><span data-i18n="nav.home">Accueil</span></a></li>
+                <li><a href="#about" class="sidebar-link" data-section="about"><i class="fas fa-user"></i><span data-i18n="nav.about">À propos</span></a></li>
+                <li><a href="#experience" class="sidebar-link" data-section="experience"><i class="fas fa-briefcase"></i><span data-i18n="nav.experience">Parcours</span></a></li>
+                <li><a href="#skills" class="sidebar-link" data-section="skills"><i class="fas fa-layer-group"></i><span data-i18n="nav.skills">Compétences</span></a></li>
+                <li><a href="#projects" class="sidebar-link" data-section="projects"><i class="fas fa-folder-open"></i><span data-i18n="nav.projects">Projets</span></a></li>
+                <li><a href="#education" class="sidebar-link" data-section="education"><i class="fas fa-graduation-cap"></i><span data-i18n="nav.education">Formation</span></a></li>
+                <li><a href="#contact" class="sidebar-link" data-section="contact"><i class="fas fa-envelope"></i><span data-i18n="nav.contact">Contact</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button type="button" class="lang-toggle" id="langToggle" aria-label="Changer de langue / Switch language">
+                <span class="lang-option" data-lang="fr">FR</span>
+                <span class="lang-option" data-lang="en">EN</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- HOME / HERO -->
+        <section class="hero" id="home">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <div class="orbit-wrap" id="orbitWrap">
+                    <div class="orbit-photo">
+                        <img src="images/profile-1.jpg" alt="Photo de Chokri Ben Mahjoub">
+                    </div>
+                    <div class="orbit-ring" id="orbitRing">
+                        <span class="orbit-icon" style="--angle:0deg"><i class="fab fa-vuejs"></i></span>
+                        <span class="orbit-icon" style="--angle:22deg"><i class="fab fa-microsoft"></i></span>
+                        <span class="orbit-icon" style="--angle:44deg"><i class="fab fa-html5"></i></span>
+                        <span class="orbit-icon" style="--angle:66deg"><i class="fab fa-css3-alt"></i></span>
+                        <span class="orbit-icon" style="--angle:88deg"><i class="fab fa-js"></i></span>
+                        <span class="orbit-icon" style="--angle:110deg"><i class="fab fa-php"></i></span>
+                        <span class="orbit-icon" style="--angle:132deg"><i class="fab fa-laravel"></i></span>
+                        <span class="orbit-icon" style="--angle:154deg"><i class="fas fa-database"></i></span>
+                        <span class="orbit-icon" style="--angle:176deg"><i class="fab fa-docker"></i></span>
+                        <span class="orbit-icon" style="--angle:198deg"><i class="fab fa-git-alt"></i></span>
+                        <span class="orbit-icon" style="--angle:220deg"><i class="fas fa-server"></i></span>
+                        <span class="orbit-icon" style="--angle:242deg"><i class="fab fa-java"></i></span>
+                        <span class="orbit-icon" style="--angle:264deg"><i class="fas fa-network-wired"></i></span>
+                        <span class="orbit-icon" style="--angle:286deg"><i class="fas fa-cubes"></i></span>
+                        <span class="orbit-icon" style="--angle:308deg"><i class="fas fa-chart-line"></i></span>
+                        <span class="orbit-icon" style="--angle:330deg"><i class="fas fa-code"></i></span>
+                    </div>
+                </div>
+                <h2 class="hero-name">Chokri Ben Mahjoub</h2>
+                <div class="hero-typed"><span class="typing"></span></div>
                 <div class="status-badge">
                     <span class="status-dot" aria-hidden="true"></span>
                     <span data-i18n="home.available">Disponible pour de nouvelles opportunités</span>
                 </div>
-                <div class="text-1" data-i18n="home.greeting">👋 Bonjour, je suis</div>
-                <h1 class="text-2">Chokri Ben Mahjoub</h1>
-                <div class="text-3"><span data-i18n="home.imPrefix">Je suis</span> <span class="typing"></span></div>
-                <p class="home-desc" data-i18n="home.desc">Développeur Full Stack passionné par la résolution de problèmes complexes.
-                    Expérimenté en développement .NET, applications de gestion Sage et intégration de passerelles
-                    de facturation électronique connectées à TTN.</p>
                 <div class="home-btns">
                     <a href="#contact" class="theme-btn" data-i18n="home.contactBtn">Me contacter</a>
                     <div class="cv-dropdown">
                         <a href="#" class="ghost-btn">
-                            <i class="las la-download"></i> <span data-i18n="home.cvBtn">Télécharger CV</span> <i class="fas fa-caret-down"></i>
+                            <i class="fas fa-download"></i> <span data-i18n="home.cvBtn">Télécharger CV</span> <i class="fas fa-caret-down"></i>
                         </a>
                         <div class="cv-dropdown-menu">
                             <a href="assets/CV-Chokri-Ben-Mahjoub-FR.pdf" download>🇫🇷 Version Française</a>
@@ -87,74 +123,107 @@
                         </div>
                     </div>
                 </div>
-                <div class="home-socials">
-                    <a href="https://github.com/chokri-ben-mahjoub" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/chokri-ben-mahjoub" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="js-whatsapp-link" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:chokribenmahjoub@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
-        </div>
-        <a href="#about" class="scroll-indicator" aria-label="Défiler vers le bas"><i class="fas fa-chevron-down"></i></a>
-    </section>
+            <a href="#about" class="scroll-indicator" aria-label="Défiler vers le bas"><i class="fas fa-chevron-down"></i></a>
+        </section>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <span class="section-tag" data-reveal data-i18n="about.tag">À propos</span>
-            <h2 class="title" data-reveal data-i18n="about.title">Qui suis-je ?</h2>
-            <div class="about-content">
-                <div class="column left" data-reveal>
-                    <div class="img-wrap">
-                        <img src="images/profile-1.jpg" alt="Photo de Chokri Ben Mahjoub">
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="section-head" data-reveal>
+                <span class="section-badge"><i class="fas fa-user"></i> <span data-i18n="about.tag">À propos</span></span>
+                <h2 class="section-title" data-i18n="about.title">Qui suis-je ?</h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">Un aperçu rapide de mon profil et de ce qui me motive au quotidien.</p>
+            </div>
+
+            <div class="info-card" data-reveal>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-user info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.name">Nom</span><span class="info-value">Chokri Ben Mahjoub</span></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-hourglass-half info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.experience">Expérience</span><span class="info-value" data-i18n="about.info.experienceValue">4+ ans</span></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.website">Site</span><span class="info-value"><a href="https://chokri-ben-mahjoub.github.io/">chokri-ben-mahjoub.github.io</a></span></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.degree">Diplôme</span><span class="info-value" data-i18n="about.info.degreeValue">Master Génie Logiciel</span></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-mobile-screen info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.phone">Téléphone</span><span class="info-value"><a href="tel:+21695636012">+216 95 636 012</a></span></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.email">Email</span><span class="info-value"><a href="mailto:chokribenmahjoub@gmail.com">chokribenmahjoub@gmail.com</a></span></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-location-dot info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.city">Ville</span><span class="info-value" data-i18n="about.info.cityValue">Sfax, Tunisie</span></div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase info-icon"></i>
+                        <div><span class="info-label" data-i18n="about.info.status">Statut</span><span class="info-value"><span class="status-pill" data-i18n="about.info.statusValue">Disponible</span></span></div>
                     </div>
                 </div>
-                <div class="column right" data-reveal>
-                    <div class="text" data-i18n-html="about.headline">Développeur Full Stack basé à <span>Sfax, Tunisie</span></div>
+
+                <div class="info-text">
                     <p data-i18n="about.desc">Polyvalent et autonome, j'interviens aussi bien sur le frontend que le backend, en m'adaptant
                         rapidement aux différents contextes métier et technologies. Motivé par la recherche de
                         solutions innovantes, je m'investis pleinement dans chaque projet pour livrer des résultats
                         concrets et de qualité.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-num">4+</div>
-                            <div class="stat-label" data-i18n="about.stat.years">Ans d'expérience</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-num">4</div>
-                            <div class="stat-label" data-i18n="about.stat.companies">Entreprises</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-num">20+</div>
-                            <div class="stat-label" data-i18n="about.stat.tech">Technologies maîtrisées</div>
-                        </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-num">4+</div>
+                        <div class="stat-label" data-i18n="about.stat.years">Ans d'expérience</div>
                     </div>
-                    <div class="home-btns">
-                        <div class="cv-dropdown">
-                            <a href="#" class="theme-btn">
-                                <i class="las la-download"></i> <span data-i18n="about.cvBtn">Télécharger mon CV</span> <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="cv-dropdown-menu">
-                                <a href="assets/CV-Chokri-Ben-Mahjoub-FR.pdf" download>🇫🇷 Version Française</a>
-                                <a href="assets/CV-Chokri-Ben-Mahjoub-EN.pdf" download>🇬🇧 English Version</a>
-                            </div>
+                    <div class="stat">
+                        <div class="stat-num">4</div>
+                        <div class="stat-label" data-i18n="about.stat.companies">Entreprises</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">20+</div>
+                        <div class="stat-label" data-i18n="about.stat.tech">Technologies maîtrisées</div>
+                    </div>
+                </div>
+
+                <div class="pill-btns">
+                    <a href="https://github.com/chokri-ben-mahjoub" target="_blank" rel="noopener" class="pill-btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/chokri-ben-mahjoub" target="_blank" rel="noopener" class="pill-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="#" class="js-whatsapp-link pill-btn" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+
+                <div class="info-cta">
+                    <div class="cv-dropdown">
+                        <a href="#" class="theme-btn">
+                            <i class="fas fa-download"></i> <span data-i18n="about.cvBtn">Télécharger mon CV</span>
+                        </a>
+                        <div class="cv-dropdown-menu">
+                            <a href="assets/CV-Chokri-Ben-Mahjoub-FR.pdf" download>🇫🇷 Version Française</a>
+                            <a href="assets/CV-Chokri-Ben-Mahjoub-EN.pdf" download>🇬🇧 English Version</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- EXPERIENCE -->
-    <section class="experience" id="experience">
-        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
-        <div class="max-width">
-            <span class="section-tag" data-reveal data-i18n="exp.tag">Parcours</span>
-            <h2 class="title" data-reveal data-i18n="exp.title">Expérience professionnelle</h2>
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <div class="section-head" data-reveal>
+                <span class="section-badge"><i class="fas fa-briefcase"></i> <span data-i18n="exp.tag">Parcours</span></span>
+                <h2 class="section-title" data-i18n="exp.title">Expérience professionnelle</h2>
+                <p class="section-subtitle" data-i18n="exp.subtitle">Les étapes clés de mon parcours professionnel.</p>
+            </div>
             <div class="timeline">
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
-                    <div class="timeline-card">
+                    <div class="timeline-card card">
                         <span class="badge-current" data-i18n="exp.current">Poste actuel</span>
                         <div class="tl-date" data-i18n="exp.0.date">Janv. 2024 – Présent</div>
                         <h3 data-i18n="exp.0.role">Développeur Full Stack</h3>
@@ -172,7 +241,7 @@
                 </div>
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
-                    <div class="timeline-card">
+                    <div class="timeline-card card">
                         <div class="tl-date" data-i18n="exp.1.date">Déc. 2022 – Déc. 2023</div>
                         <h3 data-i18n="exp.1.role">Développeur Full Stack</h3>
                         <div class="tl-company" data-i18n="exp.1.company">Infotech Consulting Services (ICS), Sfax</div>
@@ -188,7 +257,7 @@
                 </div>
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
-                    <div class="timeline-card">
+                    <div class="timeline-card card">
                         <div class="tl-date" data-i18n="exp.2.date">Nov. 2021 – Sep. 2022</div>
                         <h3 data-i18n="exp.2.role">Développeur</h3>
                         <div class="tl-company" data-i18n="exp.2.company">Logicom, Sfax</div>
@@ -203,7 +272,7 @@
                 </div>
                 <div class="timeline-item" data-reveal>
                     <div class="timeline-dot"></div>
-                    <div class="timeline-card">
+                    <div class="timeline-card card">
                         <div class="tl-date" data-i18n="exp.3.date">Fév. 2020 – Juil. 2020</div>
                         <h3 data-i18n="exp.3.role">Stagiaire (Projet de fin d'études)</h3>
                         <div class="tl-company" data-i18n="exp.3.company">Leader Tec Engineering, Sfax</div>
@@ -216,17 +285,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SKILLS -->
-    <section class="skills" id="skills">
-        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
-        <div class="max-width">
-            <span class="section-tag" data-reveal data-i18n="skills.tag">Compétences</span>
-            <h2 class="title" data-reveal data-i18n="skills.title">Stack technique</h2>
+        <!-- SKILLS -->
+        <section class="section section-alt" id="skills">
+            <div class="section-head" data-reveal>
+                <span class="section-badge"><i class="fas fa-layer-group"></i> <span data-i18n="skills.tag">Compétences</span></span>
+                <h2 class="section-title" data-i18n="skills.title">Stack technique</h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">Les technologies et outils que j'utilise au quotidien.</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-card" data-reveal data-tilt>
+                <div class="skill-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-display skill-icon"></i>
                     <h3 data-i18n="skills.frontend">Frontend</h3>
@@ -234,7 +303,7 @@
                         <span>Vue.js</span><span>Nuxt.js</span><span>React.js</span><span>Blazor</span><span>PrimeVue</span><span>DevExpress</span><span>JavaScript</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal data-tilt>
+                <div class="skill-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-server skill-icon"></i>
                     <h3 data-i18n="skills.backend">Backend</h3>
@@ -242,7 +311,7 @@
                         <span>.NET (C#)</span><span>PHP / Laravel</span><span>Symfony</span><span>Java / J2EE</span><span>Python</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal data-tilt>
+                <div class="skill-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-database skill-icon"></i>
                     <h3 data-i18n="skills.db">Bases de données</h3>
@@ -250,7 +319,7 @@
                         <span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal data-tilt>
+                <div class="skill-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-cubes skill-icon"></i>
                     <h3 data-i18n="skills.erp">ERP &amp; Intégration</h3>
@@ -258,7 +327,7 @@
                         <span>Sage 100</span><span>Facturation électronique TTN</span><span>Odoo</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal data-tilt>
+                <div class="skill-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-toolbox skill-icon"></i>
                     <h3 data-i18n="skills.tools">Outils &amp; DevOps</h3>
@@ -266,7 +335,7 @@
                         <span>Docker</span><span>Git</span><span>Postman</span><span>JIRA</span><span>Crystal Report</span>
                     </div>
                 </div>
-                <div class="skill-card" data-reveal data-tilt>
+                <div class="skill-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <i class="fas fa-chart-line skill-icon"></i>
                     <h3 data-i18n="skills.data">Data &amp; Automatisation</h3>
@@ -275,17 +344,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
-        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
-        <div class="max-width">
-            <span class="section-tag" data-reveal data-i18n="projects.tag">Réalisations</span>
-            <h2 class="title" data-reveal data-i18n="projects.title">Projets</h2>
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="section-head" data-reveal>
+                <span class="section-badge"><i class="fas fa-folder-open"></i> <span data-i18n="projects.tag">Réalisations</span></span>
+                <h2 class="section-title" data-i18n="projects.title">Projets</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Une sélection de projets sur lesquels j'ai travaillé.</p>
+            </div>
             <div class="projects-grid">
-                <div class="project-card featured" data-reveal data-tilt>
+                <div class="project-card card featured" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-bus"></i></div>
                     <div class="project-body">
@@ -295,35 +364,35 @@
                         <a href="https://srtk.com.tn/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="project-card" data-reveal data-tilt>
+                <div class="project-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-cash-register"></i></div>
                     <h3 data-i18n="projects.caisse.title">Gestion de Caisse</h3>
                     <p data-i18n="projects.caisse">Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.</p>
                     <span class="project-tag-internal" data-i18n="projects.internal">Projet interne</span>
                 </div>
-                <div class="project-card" data-reveal data-tilt>
+                <div class="project-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-baby"></i></div>
                     <h3>KidTrack</h3>
                     <p data-i18n="projects.kidtrack">Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.</p>
                     <a href="https://kid-track.vercel.app" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card" data-reveal data-tilt>
+                <div class="project-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-bag-shopping"></i></div>
                     <h3>FashionShop</h3>
                     <p data-i18n="projects.fashionshop">Boutique de vêtements en ligne : panier, favoris, recherche instantanée, filtres, paiement simulé et suivi de commande.</p>
                     <a href="https://chokri-ben-mahjoub-fashion-shop-jbc.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card" data-reveal data-tilt>
+                <div class="project-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-shirt"></i></div>
                     <h3>URBN.</h3>
                     <p data-i18n="projects.urbn">Site e-commerce streetwear au design minimaliste et éditorial : catalogue, fiche produit, panier, tunnel de commande et espace client.</p>
                     <a href="https://streetwear-collective.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card" data-reveal data-tilt>
+                <div class="project-card card" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
                     <div class="project-icon"><i class="fas fa-table-columns"></i></div>
                     <h3>TaskFlow</h3>
@@ -331,15 +400,15 @@
                     <a href="https://kanban-taskflow-one.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- EDUCATION -->
-    <section class="education" id="education">
-        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
-        <div class="max-width">
-            <span class="section-tag" data-reveal data-i18n="edu.tag">Formation</span>
-            <h2 class="title" data-reveal data-i18n="edu.title">Études &amp; Langues</h2>
+        <!-- EDUCATION -->
+        <section class="section section-alt" id="education">
+            <div class="section-head" data-reveal>
+                <span class="section-badge"><i class="fas fa-graduation-cap"></i> <span data-i18n="edu.tag">Formation</span></span>
+                <h2 class="section-title" data-i18n="edu.title">Études &amp; Langues</h2>
+                <p class="section-subtitle" data-i18n="edu.subtitle">Mon parcours académique et les langues que je parle.</p>
+            </div>
             <div class="edu-content">
                 <div class="edu-list" data-reveal>
                     <div class="edu-item">
@@ -367,7 +436,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="edu-languages" data-reveal>
+                <div class="edu-languages card" data-reveal>
                     <h3 data-i18n="edu.languages">Langues</h3>
                     <div class="lang-item">
                         <span data-i18n="edu.lang.ar">Arabe</span>
@@ -386,17 +455,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <div class="section-orbs" aria-hidden="true"><span></span><span></span></div>
-        <div class="max-width">
-            <span class="section-tag" data-reveal data-i18n="contact.tag">Contact</span>
-            <h2 class="title" data-reveal data-i18n="contact.title">Discutons de votre projet</h2>
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="section-head" data-reveal>
+                <span class="section-badge"><i class="fas fa-envelope"></i> <span data-i18n="contact.tag">Contact</span></span>
+                <h2 class="section-title" data-i18n="contact.title">Discutons de votre projet</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">N'hésitez pas à me contacter, je réponds rapidement.</p>
+            </div>
             <div class="contact-content">
-                <div class="column left" data-reveal>
+                <div class="column left card" data-reveal>
                     <div class="text" data-i18n="contact.headline">Restons en contact</div>
                     <p data-i18n="contact.desc">Rigoureux, dynamique, aussi à l'aise en autonomie qu'en équipe, je suis convaincu du bénéfice
                         mutuel d'une future collaboration entre votre entreprise et moi.</p>
@@ -452,7 +521,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column right" data-reveal>
+                <div class="column right card" data-reveal>
                     <div class="text" data-i18n="contact.formTitle">Envoyez-moi un message</div>
                     <form id="contactForm">
                         <!-- Clé d'accès Web3Forms : à remplacer par la tienne (gratuite, sans compte) sur https://web3forms.com -->
@@ -482,14 +551,12 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="max-width">
+        <footer>
             <span><span data-i18n="footer.text">Conçu &amp; développé par</span> <a href="https://github.com/chokri-ben-mahjoub" target="_blank" rel="noopener">Chokri Ben Mahjoub</a> — <span class="far fa-copyright"></span> <span id="year"></span></span>
-        </div>
-    </footer>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
