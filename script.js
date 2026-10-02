@@ -16,9 +16,11 @@ var translations = {
         'nav.experience': 'Parcours',
         'nav.skills': 'Compétences',
         'nav.projects': 'Projets',
+        'nav.education': 'Formation',
         'nav.contact': 'Contact',
         'nav.cta': 'Me contacter',
 
+        'hero.role': 'Développeur Full Stack',
         'home.available': 'Disponible pour de nouvelles opportunités',
         'home.greeting': '👋 Bonjour, je suis',
         'home.imPrefix': 'Je suis',
@@ -29,15 +31,29 @@ var translations = {
 
         'about.tag': 'À propos',
         'about.title': 'Qui suis-je ?',
+        'about.subtitle': 'Un aperçu rapide de mon profil et de ce qui me motive au quotidien.',
         'about.headline': 'Développeur Full Stack basé à <span>Sfax, Tunisie</span>',
         'about.desc': "Polyvalent et autonome, j'interviens aussi bien sur le frontend que le backend, en m'adaptant rapidement aux différents contextes métier et technologies. Motivé par la recherche de solutions innovantes, je m'investis pleinement dans chaque projet pour livrer des résultats concrets et de qualité.",
         'about.stat.years': "Ans d'expérience",
         'about.stat.companies': 'Entreprises',
         'about.stat.tech': 'Technologies maîtrisées',
         'about.cvBtn': 'Télécharger mon CV',
+        'about.info.name': 'Nom',
+        'about.info.experience': 'Expérience',
+        'about.info.experienceValue': '4+ ans',
+        'about.info.website': 'Site',
+        'about.info.degree': 'Diplôme',
+        'about.info.degreeValue': 'Master Génie Logiciel',
+        'about.info.phone': 'Téléphone',
+        'about.info.email': 'Email',
+        'about.info.city': 'Ville',
+        'about.info.cityValue': 'Sfax, Tunisie',
+        'about.info.status': 'Statut',
+        'about.info.statusValue': 'Disponible',
 
         'exp.tag': 'Parcours',
         'exp.title': 'Expérience professionnelle',
+        'exp.subtitle': 'Les étapes clés de mon parcours professionnel.',
         'exp.current': 'Poste actuel',
         'exp.0.date': 'Janv. 2024 – Présent',
         'exp.0.role': 'Développeur Full Stack',
@@ -64,6 +80,7 @@ var translations = {
 
         'skills.tag': 'Compétences',
         'skills.title': 'Stack technique',
+        'skills.subtitle': 'Les technologies et outils que j\'utilise au quotidien.',
         'skills.frontend': 'Frontend',
         'skills.backend': 'Backend',
         'skills.db': 'Bases de données',
@@ -73,6 +90,7 @@ var translations = {
 
         'projects.tag': 'Réalisations',
         'projects.title': 'Projets',
+        'projects.subtitle': 'Une sélection de projets sur lesquels j\'ai travaillé.',
         'projects.featured': 'Client officiel',
         'projects.srtk': 'Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).',
         'projects.caisse.title': 'Gestion de Caisse',
@@ -86,6 +104,7 @@ var translations = {
 
         'edu.tag': 'Formation',
         'edu.title': 'Études & Langues',
+        'edu.subtitle': 'Mon parcours académique et les langues que je parle.',
         'edu.0.title': 'Master en Développement des Systèmes Informatiques et Réseaux',
         'edu.0.school': 'ISET Sfax — Génie Logiciel et Nouvelles Technologies',
         'edu.1.title': 'Licence Fondamentale en Informatique',
@@ -101,6 +120,7 @@ var translations = {
 
         'contact.tag': 'Contact',
         'contact.title': 'Discutons de votre projet',
+        'contact.subtitle': 'N\'hésitez pas à me contacter, je réponds rapidement.',
         'contact.headline': 'Restons en contact',
         'contact.desc': "Rigoureux, dynamique, aussi à l'aise en autonomie qu'en équipe, je suis convaincu du bénéfice mutuel d'une future collaboration entre votre entreprise et moi.",
         'contact.email': 'Email',
@@ -132,9 +152,11 @@ var translations = {
         'nav.experience': 'Experience',
         'nav.skills': 'Skills',
         'nav.projects': 'Projects',
+        'nav.education': 'Education',
         'nav.contact': 'Contact',
         'nav.cta': 'Contact me',
 
+        'hero.role': 'Full Stack Developer',
         'home.available': 'Available for new opportunities',
         'home.greeting': "👋 Hi, I'm",
         'home.imPrefix': "I'm a",
@@ -145,15 +167,29 @@ var translations = {
 
         'about.tag': 'About',
         'about.title': 'Who am I?',
+        'about.subtitle': 'A quick overview of my profile and what drives me every day.',
         'about.headline': 'Full Stack Developer based in <span>Sfax, Tunisia</span>',
         'about.desc': "Versatile and autonomous, I work on both frontend and backend, quickly adapting to different business contexts and technologies. Driven by the search for innovative solutions, I fully commit to every project to deliver concrete, quality results.",
         'about.stat.years': 'Years of experience',
         'about.stat.companies': 'Companies',
         'about.stat.tech': 'Technologies mastered',
         'about.cvBtn': 'Download my CV',
+        'about.info.name': 'Name',
+        'about.info.experience': 'Experience',
+        'about.info.experienceValue': '4+ years',
+        'about.info.website': 'Website',
+        'about.info.degree': 'Degree',
+        'about.info.degreeValue': "Master's in Software Engineering",
+        'about.info.phone': 'Phone',
+        'about.info.email': 'Email',
+        'about.info.city': 'City',
+        'about.info.cityValue': 'Sfax, Tunisia',
+        'about.info.status': 'Status',
+        'about.info.statusValue': 'Available',
 
         'exp.tag': 'Experience',
         'exp.title': 'Professional experience',
+        'exp.subtitle': 'The key milestones of my professional journey.',
         'exp.current': 'Current position',
         'exp.0.date': 'Jan. 2024 – Present',
         'exp.0.role': 'Full Stack Developer',
@@ -180,6 +216,7 @@ var translations = {
 
         'skills.tag': 'Skills',
         'skills.title': 'Tech stack',
+        'skills.subtitle': 'The technologies and tools I use every day.',
         'skills.frontend': 'Frontend',
         'skills.backend': 'Backend',
         'skills.db': 'Databases',
@@ -189,6 +226,7 @@ var translations = {
 
         'projects.tag': 'Achievements',
         'projects.title': 'Projects',
+        'projects.subtitle': 'A selection of projects I have worked on.',
         'projects.featured': 'Official client',
         'projects.srtk': 'Dynamic web application developed for the Sfax Regional Transport Company (SRTK).',
         'projects.caisse.title': 'Point of Sale Management',
@@ -202,6 +240,7 @@ var translations = {
 
         'edu.tag': 'Education',
         'edu.title': 'Education & Languages',
+        'edu.subtitle': 'My academic background and the languages I speak.',
         'edu.0.title': "Master's in Information Systems and Network Development",
         'edu.0.school': 'ISET Sfax — Software Engineering and New Technologies',
         'edu.1.title': "Bachelor's Degree in Computer Science",
@@ -217,6 +256,7 @@ var translations = {
 
         'contact.tag': 'Contact',
         'contact.title': "Let's discuss your project",
+        'contact.subtitle': "Feel free to reach out, I respond quickly.",
         'contact.headline': "Let's stay in touch",
         'contact.desc': "Rigorous, dynamic, equally comfortable working independently or in a team, I'm confident in the mutual benefit of a future collaboration between your company and me.",
         'contact.email': 'Email',
@@ -316,30 +356,35 @@ function applyLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    var navbar = document.querySelector('.navbar');
-    var menu = document.querySelector('.navbar .menu');
-    var menuBtn = document.querySelector('.menu-btn');
+    var sidebar = document.getElementById('sidebar');
+    var sidebarToggle = document.getElementById('sidebarToggle');
+    var sidebarOverlay = document.getElementById('sidebarOverlay');
     var scrollUpBtn = document.querySelector('.scroll-up-btn');
-    var cursorGlow = document.querySelector('.cursor-glow');
     var langToggle = document.getElementById('langToggle');
 
-    // ---- sticky navbar + scroll-up button + active link ----
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---- scroll-up button + scrollspy (IntersectionObserver) ----
     var sections = document.querySelectorAll('section[id]');
-    var navLinks = document.querySelectorAll('.menu-link');
+    var navLinks = document.querySelectorAll('.sidebar-link');
+
+    function setActiveLink(id) {
+        navLinks.forEach(function (link) {
+            link.classList.toggle('active-link', link.getAttribute('data-section') === id);
+        });
+    }
+
+    if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) setActiveLink(entry.target.getAttribute('id'));
+            });
+        }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+        sections.forEach(function (section) { spy.observe(section); });
+    }
 
     function onScroll() {
-        var y = window.scrollY;
-        navbar.classList.toggle('sticky', y > 20);
-        scrollUpBtn.classList.toggle('show', y > 500);
-
-        var current = '';
-        sections.forEach(function (section) {
-            var top = section.offsetTop - 120;
-            if (y >= top) current = section.getAttribute('id');
-        });
-        navLinks.forEach(function (link) {
-            link.classList.toggle('active-link', link.getAttribute('href') === '#' + current);
-        });
+        scrollUpBtn.classList.toggle('show', window.scrollY > 500);
     }
     window.addEventListener('scroll', onScroll);
     onScroll();
@@ -353,28 +398,56 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ---- mobile menu toggle ----
-    menuBtn.addEventListener('click', function () {
-        menu.classList.toggle('active');
-        menuBtn.querySelector('i').classList.toggle('fa-bars');
-        menuBtn.querySelector('i').classList.toggle('fa-xmark');
+    // ---- mobile sidebar toggle ----
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+        sidebarOverlay.classList.remove('show');
+        sidebarToggle.setAttribute('aria-expanded', 'false');
+    }
+    function openSidebar() {
+        sidebar.classList.add('open');
+        sidebarOverlay.classList.add('show');
+        sidebarToggle.setAttribute('aria-expanded', 'true');
+    }
+    sidebarToggle.addEventListener('click', function () {
+        if (sidebar.classList.contains('open')) closeSidebar(); else openSidebar();
     });
+    sidebarOverlay.addEventListener('click', closeSidebar);
     navLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-            menu.classList.remove('active');
-        });
+        link.addEventListener('click', closeSidebar);
     });
 
-    // ---- cursor glow (desktop only) ----
-    if (window.matchMedia('(pointer: fine)').matches && cursorGlow) {
-        document.addEventListener('mousemove', function (e) {
-            cursorGlow.style.left = e.clientX + 'px';
-            cursorGlow.style.top = e.clientY + 'px';
-        });
+    // ---- hero orbit rotation ----
+    var orbitRing = document.getElementById('orbitRing');
+    if (orbitRing && !reduceMotion) {
+        var orbitOffset = 0;
+        var lastTs = null;
+        function animateOrbit(ts) {
+            if (lastTs == null) lastTs = ts;
+            var dt = ts - lastTs;
+            lastTs = ts;
+            orbitOffset = (orbitOffset + dt * 0.015) % 360;
+            orbitRing.style.setProperty('--orbit-offset', orbitOffset + 'deg');
+            requestAnimationFrame(animateOrbit);
+        }
+        var orbitRaf = requestAnimationFrame(animateOrbit);
+        window.addEventListener('beforeunload', function () { cancelAnimationFrame(orbitRaf); });
+
+        // slight parallax reaction to mouse (desktop only)
+        var orbitWrap = document.getElementById('orbitWrap');
+        if (orbitWrap && window.matchMedia('(pointer: fine)').matches) {
+            document.querySelector('.hero').addEventListener('mousemove', function (e) {
+                var rect = orbitWrap.getBoundingClientRect();
+                var cx = rect.left + rect.width / 2;
+                var cy = rect.top + rect.height / 2;
+                var dx = (e.clientX - cx) / rect.width;
+                var dy = (e.clientY - cy) / rect.height;
+                orbitWrap.style.transform = 'translate(' + (dx * 10).toFixed(1) + 'px,' + (dy * 10).toFixed(1) + 'px)';
+            });
+        }
     }
 
     // ---- tilt + spotlight micro-interaction on [data-tilt] cards (desktop only) ----
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (window.matchMedia('(pointer: fine)').matches && !reduceMotion) {
         var tiltEls = document.querySelectorAll('[data-tilt]');
         tiltEls.forEach(function (el) {
