@@ -973,3 +973,8 @@ html[data-theme="dark"] .cv-dropdown-menu { background: #16213a; }
 html[data-theme="dark"] .cv-dropdown-menu a { color: var(--text); }
 .hero-stats span { color: rgba(255,255,255,0.88); text-shadow: 0 1px 6px rgba(0,0,0,0.35); }
 .hero-stats b { text-shadow: 0 1px 8px rgba(0,0,0,0.35); }
+
+/* Numéros, e-mails et URL : toujours de gauche à droite, même en arabe */
+html[dir="rtl"] a[href^="tel:"], html[dir="rtl"] a[href^="mailto:"], html[dir="rtl"] .js-whatsapp-link,
+html[dir="rtl"] .info-value a { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+html[dir="rtl"] .hero-name, html[dir="rtl"] .sidebar-name { font-family: 'Segoe UI', Tahoma, 'Noto Naskh Arabic', Arial, sans-serif; letter-spacing: 0; }

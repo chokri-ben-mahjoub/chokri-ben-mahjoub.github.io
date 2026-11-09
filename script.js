@@ -11,6 +11,7 @@ var translations = {
         'meta.title': 'Chokri Ben Mahjoub — Développeur Full Stack .NET / Vue.js',
         'meta.description': "Portfolio de Chokri Ben Mahjoub, Développeur Full Stack à Sfax, Tunisie. Spécialisé en .NET, Vue.js, intégration Sage 100 et facturation électronique TTN.",
 
+        'name.full': 'Chokri Ben Mahjoub',
         'nav.home': 'Accueil',
         'nav.about': 'À propos',
         'nav.experience': 'Parcours',
@@ -154,6 +155,7 @@ var translations = {
         'meta.title': 'Chokri Ben Mahjoub — Full Stack Developer .NET / Vue.js',
         'meta.description': 'Portfolio of Chokri Ben Mahjoub, Full Stack Developer based in Sfax, Tunisia. Specialized in .NET, Vue.js, Sage 100 integration and TTN electronic invoicing.',
 
+        'name.full': 'Chokri Ben Mahjoub',
         'nav.home': 'Home',
         'nav.about': 'About',
         'nav.experience': 'Experience',
@@ -298,6 +300,7 @@ var translations = {
         'meta.title': 'شكري بن محجوب — مطوّر Full Stack ‏.NET / Vue.js',
         'meta.description': 'الموقع الشخصي لشكري بن محجوب، مطوّر Full Stack في صفاقس، تونس. متخصص في .NET وVue.js وربط Sage 100 والفوترة الإلكترونية TTN.',
 
+        'name.full': 'شكري بن محجوب',
         'nav.home': 'الرئيسية',
         'nav.about': 'نبذة عني',
         'nav.experience': 'المسار المهني',
