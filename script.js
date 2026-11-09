@@ -109,6 +109,9 @@ var translations = {
         'home.projectsBtn': 'Voir mes projets',
         'projects.demo': 'Voir la démo',
         'projects.view': 'Voir le site',
+        'projects.saas': 'Plateforme SaaS',
+        'projects.educonnect': 'Plateforme éducative SaaS multi-tenant : cours vidéo, examens à correction automatique et certificats, assistant IA (RAG), paiements Stripe, classes virtuelles, messagerie, rôles (admin, enseignant, élève, parent). Trois langues (FR/EN/AR) avec RTL et thème clair/sombre.',
+        'projects.code': 'Voir le code',
 
         'edu.tag': 'Formation',
         'edu.title': 'Études & Langues',
@@ -253,6 +256,9 @@ var translations = {
         'home.projectsBtn': 'View my projects',
         'projects.demo': 'View demo',
         'projects.view': 'View site',
+        'projects.saas': 'SaaS platform',
+        'projects.educonnect': 'Multi-tenant education SaaS platform: video courses, auto-graded exams and certificates, AI assistant (RAG), Stripe payments, virtual classes, messaging, roles (admin, teacher, student, parent). Three languages (FR/EN/AR) with RTL and light/dark theme.',
+        'projects.code': 'View code',
 
         'edu.tag': 'Education',
         'edu.title': 'Education & Languages',
@@ -398,6 +404,9 @@ var translations = {
         'home.projectsBtn': 'عرض مشاريعي',
         'projects.demo': 'عرض النسخة التجريبية',
         'projects.view': 'زيارة الموقع',
+        'projects.saas': 'منصة SaaS',
+        'projects.educonnect': 'منصة تعليمية SaaS متعددة المؤسسات: دروس فيديو، امتحانات بتصحيح آلي وشهادات، مساعد ذكي (RAG)، دفع عبر Stripe، فصول افتراضية، مراسلة، وأدوار (مسؤول، معلم، تلميذ، ولي). ثلاث لغات (FR/EN/AR) مع RTL وثيم فاتح/داكن.',
+        'projects.code': 'عرض الكود',
 
         'edu.tag': 'التكوين',
         'edu.title': 'التكوين واللغات',
