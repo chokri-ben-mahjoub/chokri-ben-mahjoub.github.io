@@ -4,7 +4,7 @@
 var WHATSAPP_NUMBER = '21695636012'; // +216 95 636 012, format international sans "+"
 
 // ============================================================
-// i18n — dictionnaire de traduction FR / EN
+// i18n — dictionnaire de traduction FR / EN / AR
 // ============================================================
 var translations = {
     fr: {
@@ -100,6 +100,8 @@ var translations = {
         'projects.fashionshop': 'Boutique de vêtements en ligne : panier, favoris, recherche instantanée, filtres, paiement simulé et suivi de commande.',
         'projects.urbn': 'Site e-commerce streetwear au design minimaliste et éditorial : catalogue, fiche produit, panier, tunnel de commande et espace client.',
         'projects.taskflow': 'Tableau Kanban moderne avec drag & drop, tags, sous-tâches, palette de commandes, ajout rapide en langage naturel et tâches récurrentes.',
+        'projects.orvatek': "Application mobile (Flutter + Firebase) de maintenance et SAV avec trois espaces : client, technicien et admin. Suivi du technicien en direct sur carte, devis avec signature, factures PDF, notifications push et trois langues (AR/FR/EN) avec RTL.",
+        'projects.demo': 'Voir la démo',
         'projects.view': 'Voir le site',
 
         'edu.tag': 'Formation',
@@ -236,6 +238,8 @@ var translations = {
         'projects.fashionshop': 'Online clothing store: cart, wishlist, instant search, filters, simulated payment and order tracking.',
         'projects.urbn': 'Minimalist, editorial-style streetwear e-commerce site: catalog, product page, cart, checkout flow and customer account.',
         'projects.taskflow': 'Modern Kanban board with drag & drop, tags, subtasks, command palette, natural-language quick add and recurring tasks.',
+        'projects.orvatek': 'Mobile maintenance & after-sales app (Flutter + Firebase) with three spaces: customer, technician and admin. Live technician tracking on a map, signed quotes, PDF invoices, push notifications and three languages (AR/FR/EN) with RTL.',
+        'projects.demo': 'View demo',
         'projects.view': 'View site',
 
         'edu.tag': 'Education',
@@ -278,6 +282,145 @@ var translations = {
         'form.success': 'Message sent successfully, thank you!',
         'form.error': 'Failed to send, please try again later.',
         'form.networkError': 'Network error, please try again later.'
+    }
+,
+    ar: {
+        'meta.title': 'شكري بن محجوب — مطوّر Full Stack ‏.NET / Vue.js',
+        'meta.description': 'الموقع الشخصي لشكري بن محجوب، مطوّر Full Stack في صفاقس، تونس. متخصص في .NET وVue.js وربط Sage 100 والفوترة الإلكترونية TTN.',
+
+        'nav.home': 'الرئيسية',
+        'nav.about': 'نبذة عني',
+        'nav.experience': 'المسار المهني',
+        'nav.skills': 'المهارات',
+        'nav.projects': 'المشاريع',
+        'nav.education': 'التكوين',
+        'nav.contact': 'اتصال',
+        'nav.cta': 'تواصل معي',
+
+        'hero.role': 'مطوّر Full Stack',
+        'home.available': 'متاح لفرص جديدة',
+        'home.greeting': '👋 مرحبًا، أنا',
+        'home.imPrefix': 'أنا',
+        'home.typed': ['مطوّر Full Stack', 'مطوّر .NET / C#', 'مطوّر Vue.js', 'مُدمج أنظمة Sage 100'],
+        'home.desc': 'مطوّر Full Stack شغوف بحل المشكلات المعقدة. لدي خبرة في تطوير .NET وتطبيقات التسيير Sage وربط بوابات الفوترة الإلكترونية المتصلة بـ TTN.',
+        'home.contactBtn': 'تواصل معي',
+        'home.cvBtn': 'تحميل السيرة الذاتية',
+
+        'about.tag': 'نبذة عني',
+        'about.title': 'من أنا؟',
+        'about.subtitle': 'لمحة سريعة عن ملفي المهني وما يحفزني كل يوم.',
+        'about.headline': 'مطوّر Full Stack مقيم في <span>صفاقس، تونس</span>',
+        'about.desc': 'متعدد المهارات ومستقل، أشتغل على الواجهات الأمامية والخلفية معًا وأتكيّف بسرعة مع مختلف المجالات والتقنيات. يدفعني البحث عن حلول مبتكرة، وألتزم بكل مشروع لتحقيق نتائج ملموسة وعالية الجودة.',
+        'about.stat.years': 'سنوات من الخبرة',
+        'about.stat.companies': 'شركات',
+        'about.stat.tech': 'تقنيات متقنة',
+        'about.cvBtn': 'تحميل سيرتي الذاتية',
+        'about.info.name': 'الاسم',
+        'about.info.experience': 'الخبرة',
+        'about.info.experienceValue': 'أكثر من 4 سنوات',
+        'about.info.website': 'الموقع',
+        'about.info.degree': 'الشهادة',
+        'about.info.degreeValue': 'ماجستير في هندسة البرمجيات',
+        'about.info.phone': 'الهاتف',
+        'about.info.email': 'البريد الإلكتروني',
+        'about.info.city': 'المدينة',
+        'about.info.cityValue': 'صفاقس، تونس',
+        'about.info.status': 'الحالة',
+        'about.info.statusValue': 'متاح',
+
+        'exp.tag': 'المسار المهني',
+        'exp.title': 'الخبرة المهنية',
+        'exp.subtitle': 'أهم محطات مساري المهني.',
+        'exp.current': 'المنصب الحالي',
+        'exp.0.date': 'جانفي 2024 – إلى اليوم',
+        'exp.0.role': 'مطوّر Full Stack',
+        'exp.0.company': 'APBS Groupe — مدمج حلول التسيير Sage، صفاقس',
+        'exp.0.b0': 'تطوير الويب بتقنية .NET ضمن منظومة Sage: تطبيقات تسيير المبيعات والمخزون والمحاسبة والإنتاج.',
+        'exp.0.b1': 'إنجاز بوابة فوترة إلكترونية متصلة بـ TTN (Tunisia TradeNet).',
+        'exp.0.b2': 'تصميم واجهات تفاعلية وسهلة الاستخدام باستعمال Vue.js وPrimeVue.',
+        'exp.0.b3': 'التقارير باستعمال Metabase وأتمتة سير العمل باستعمال n8n.',
+        'exp.1.date': 'ديسمبر 2022 – ديسمبر 2023',
+        'exp.1.role': 'مطوّر Full Stack',
+        'exp.1.company': 'Infotech Consulting Services (ICS)، صفاقس',
+        'exp.1.b0': 'بناء واجهات REST API جديدة واختبارها والتحقق منها باستعمال Postman.',
+        'exp.1.b1': 'تطوير خدمات خلفية لدعم الوظائف المهنية.',
+        'exp.1.b2': 'بناء واجهات أمامية لتحسين تجربة المستخدم.',
+        'exp.2.date': 'نوفمبر 2021 – سبتمبر 2022',
+        'exp.2.role': 'مطوّر',
+        'exp.2.company': 'Logicom، صفاقس',
+        'exp.2.b0': 'متابعة شكاوى الحرفاء ومعالجتها، والتطوير على وحدات ERP (المبيعات، المخزون، الإنتاج، نقاط البيع).',
+        'exp.2.b1': 'اختبار ونشر تقارير Crystal Report.',
+        'exp.3.date': 'فيفري 2020 – جويلية 2020',
+        'exp.3.role': 'متربّص (مشروع نهاية الدراسة)',
+        'exp.3.company': 'Leader Tec Engineering، صفاقس',
+        'exp.3.b0': 'تطوير تطبيق لتسيير المخزون: الموردون، طلبات الحرفاء، المنتجات، الفواتير، عروض الأسعار.',
+
+        'skills.tag': 'المهارات',
+        'skills.title': 'التقنيات المستعملة',
+        'skills.subtitle': 'التقنيات والأدوات التي أستعملها يوميًا.',
+        'skills.frontend': 'الواجهة الأمامية',
+        'skills.backend': 'الواجهة الخلفية',
+        'skills.db': 'قواعد البيانات',
+        'skills.erp': 'ERP والربط',
+        'skills.tools': 'الأدوات وDevOps',
+        'skills.data': 'البيانات والأتمتة',
+
+        'projects.tag': 'الإنجازات',
+        'projects.title': 'المشاريع',
+        'projects.subtitle': 'مجموعة مختارة من المشاريع التي اشتغلت عليها.',
+        'projects.featured': 'حريف رسمي',
+        'projects.srtk': 'تطبيق ويب ديناميكي تم تطويره للشركة الجهوية للنقل بصفاقس (SRTK).',
+        'projects.caisse.title': 'تسيير الصندوق',
+        'projects.caisse': 'تطبيق عصري وسهل الاستعمال لتسيير الصندوق لتحسين عمليات نقاط البيع.',
+        'projects.internal': 'مشروع داخلي',
+        'projects.kidtrack': 'منصة لتسيير الحضانة: المتابعة اليومية للأطفال والحضور والفوترة والتواصل مع الأولياء.',
+        'projects.fashionshop': 'متجر ملابس إلكتروني: سلة مشتريات، مفضلة، بحث فوري، مرشحات، دفع تجريبي وتتبع الطلبات.',
+        'projects.urbn': 'موقع تجارة إلكترونية لملابس الشارع بتصميم بسيط وأنيق: كتالوج، صفحة المنتج، سلة، إتمام الطلب وفضاء الحريف.',
+        'projects.taskflow': 'لوحة Kanban عصرية مع السحب والإفلات، وسوم، مهام فرعية، لوحة أوامر، إضافة سريعة بلغة طبيعية ومهام متكررة.',
+        'projects.orvatek': 'تطبيق موبايل (Flutter + Firebase) للصيانة وخدمة ما بعد البيع بثلاثة فضاءات: حريف وفني ومسؤول. تتبع الفني مباشرة على الخريطة، عروض أسعار بتوقيع، فواتير PDF، إشعارات فورية وثلاث لغات مع دعم RTL.',
+        'projects.demo': 'عرض النسخة التجريبية',
+        'projects.view': 'زيارة الموقع',
+
+        'edu.tag': 'التكوين',
+        'edu.title': 'التكوين واللغات',
+        'edu.subtitle': 'مساري الدراسي واللغات التي أتحدثها.',
+        'edu.0.title': 'ماجستير في نظم المعلومات وتطوير الشبكات',
+        'edu.0.school': 'المعهد العالي للدراسات التكنولوجية بصفاقس — هندسة البرمجيات والتقنيات الحديثة',
+        'edu.1.title': 'إجازة في الإعلامية',
+        'edu.1.school': 'المعهد العالي للإعلامية والملتيميديا بصفاقس',
+        'edu.2.title': 'باكالوريا شعبة الرياضيات',
+        'edu.languages': 'اللغات',
+        'edu.lang.ar': 'العربية',
+        'edu.lang.arLevel': 'اللغة الأم',
+        'edu.lang.fr': 'الفرنسية',
+        'edu.lang.frLevel': 'بطلاقة',
+        'edu.lang.en': 'الإنجليزية',
+        'edu.lang.enLevel': 'متوسط',
+
+        'contact.tag': 'اتصال',
+        'contact.title': 'لنتحدث عن مشروعك',
+        'contact.subtitle': 'لا تتردد في مراسلتي، أردّ بسرعة.',
+        'contact.headline': 'لنبقَ على تواصل',
+        'contact.desc': 'جدّي وحيوي، أرتاح للعمل بشكل مستقل كما ضمن فريق، وأؤمن بالفائدة المتبادلة لتعاون مستقبلي بين مؤسستكم وبيني.',
+        'contact.email': 'البريد الإلكتروني',
+        'contact.phone': 'الهاتف',
+        'contact.location': 'الموقع',
+        'contact.qrCaption': 'امسح الرمز للدردشة عبر واتساب',
+        'contact.formTitle': 'أرسل لي رسالة',
+        'contact.form.name': 'الاسم',
+        'contact.form.subject': 'الموضوع',
+        'contact.form.message': 'رسالتك...',
+        'contact.form.send': 'إرسال الرسالة',
+
+        'footer.text': 'تصميم وتطوير',
+
+        'whatsapp.message': 'مرحبًا شكري، أتواصل معك من موقعك الشخصي.',
+
+        'form.notConfigured': 'النموذج غير مهيأ: أضف مفتاح Web3Forms في index.html.',
+        'form.sending': 'جارٍ الإرسال...',
+        'form.success': 'تم إرسال الرسالة بنجاح، شكرًا لك!',
+        'form.error': 'فشل الإرسال، حاول مرة أخرى لاحقًا.',
+        'form.networkError': 'خطأ في الشبكة، حاول مرة أخرى لاحقًا.'
     }
 };
 
@@ -328,6 +471,7 @@ function startTyped() {
 function applyLanguage(lang) {
     currentLang = translations[lang] ? lang : 'fr';
     document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
     document.title = t('meta.title');
     var metaDesc = document.getElementById('metaDescription');
     if (metaDesc) metaDesc.setAttribute('content', t('meta.description'));
@@ -346,7 +490,7 @@ function applyLanguage(lang) {
         el.classList.toggle('active', el.getAttribute('data-lang') === currentLang);
     });
     var langToggleEl = document.getElementById('langToggle');
-    if (langToggleEl) langToggleEl.classList.toggle('is-en', currentLang === 'en');
+    if (langToggleEl) langToggleEl.setAttribute('data-lang', currentLang);
 
     updateWhatsappLinks();
     renderWhatsappQr();
@@ -486,14 +630,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ---- language toggle ----
     if (langToggle) {
-        langToggle.addEventListener('click', function () {
-            applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
+        langToggle.addEventListener('click', function (e) {
+            var opt = e.target.closest('.lang-option');
+            if (opt) { applyLanguage(opt.getAttribute('data-lang')); return; }
+            var order = ['fr', 'en', 'ar'];
+            applyLanguage(order[(order.indexOf(currentLang) + 1) % order.length]);
         });
     }
 
     var savedLang = null;
     try { savedLang = localStorage.getItem('site-lang'); } catch (e) { /* ignore */ }
-    applyLanguage(savedLang === 'en' ? 'en' : 'fr');
+    applyLanguage(translations[savedLang] ? savedLang : 'fr');
 
     // ---- contact form (Web3Forms) ----
     var form = document.getElementById('contactForm');
