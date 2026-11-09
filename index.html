@@ -70,6 +70,7 @@
         </nav>
 
         <div class="sidebar-footer">
+            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Thème clair / sombre"><i class="fas fa-moon"></i></button>
             <button type="button" class="lang-toggle" id="langToggle" aria-label="Changer de langue / Switch language">
                 <span class="lang-option" data-lang="fr">FR</span>
                 <span class="lang-option" data-lang="en">EN</span>
@@ -112,8 +113,14 @@
                     <span class="status-dot" aria-hidden="true"></span>
                     <span data-i18n="home.available">Disponible pour de nouvelles opportunités</span>
                 </div>
+                <ul class="hero-stats">
+                    <li><b>4+</b><span data-i18n="home.stat.years">ans d'expérience</span></li>
+                    <li><b>6</b><span data-i18n="home.stat.projects">projets en ligne</span></li>
+                    <li><b>3</b><span data-i18n="home.stat.langs">langues (AR · FR · EN)</span></li>
+                </ul>
                 <div class="home-btns">
                     <a href="#contact" class="theme-btn" data-i18n="home.contactBtn">Me contacter</a>
+                    <a href="#projects" class="ghost-btn"><i class="fas fa-folder-open"></i> <span data-i18n="home.projectsBtn">Voir mes projets</span></a>
                     <div class="cv-dropdown">
                         <a href="#" class="ghost-btn">
                             <i class="fas fa-download"></i> <span data-i18n="home.cvBtn">Télécharger CV</span> <i class="fas fa-caret-down"></i>
@@ -357,63 +364,40 @@
                 <p class="section-subtitle" data-i18n="projects.subtitle">Une sélection de projets sur lesquels j'ai travaillé.</p>
             </div>
             <div class="projects-grid">
-                <div class="project-card card featured" data-reveal data-tilt>
+                <div class="project-card card featured " data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
-                    <div class="project-icon"><i class="fas fa-bus"></i></div>
-                    <div class="project-body">
-                        <span class="featured-tag" data-i18n="projects.featured">Client officiel</span>
-                        <h3>SRTK</h3>
-                        <p data-i18n="projects.srtk">Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).</p>
-                    <ul class="tech-badges"><li>Nuxt.js</li><li>Vue.js</li></ul>
-                        <a href="https://srtk.com.tn/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
-                    </div>
+                    <a class="project-thumb phone" href="https://orvatek-sav.web.app" target="_blank" rel="noopener" tabindex="-1"><img src="assets/projects/orvatek.webp" alt="ORVATEK — écran de connexion" loading="lazy" width="420" height="860"></a>
+                    <div class="project-body"><span class="featured-tag" data-i18n="projects.flagship">Projet phare</span><h3>ORVATEK</h3><p data-i18n="projects.orvatek">Application mobile (Flutter + Firebase) de maintenance et SAV avec trois espaces : client, technicien et admin. Suivi du technicien en direct sur carte, devis avec signature, factures PDF, notifications push et trois langues (AR/FR/EN) avec RTL.</p><ul class="tech-badges"><li>Flutter</li><li class="fb">Firebase</li><li class="fb">Firestore</li><li class="fb">Cloud Functions</li><li>Riverpod</li></ul><a href="https://orvatek-sav.web.app" target="_blank" rel="noopener"><span data-i18n="projects.demo">Voir la démo</span> <i class="fas fa-arrow-up-right-from-square"></i></a></div>
                 </div>
-                <div class="project-card card" data-reveal data-tilt>
+                <div class="project-card card " data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
-                    <div class="project-icon"><i class="fas fa-cash-register"></i></div>
-                    <h3 data-i18n="projects.caisse.title">Gestion de Caisse</h3>
-                    <p data-i18n="projects.caisse">Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.</p>
-                    <span class="project-tag-internal" data-i18n="projects.internal">Projet interne</span>
+                    <div class="project-thumb thumb-icon"><i class="fas fa-cash-register"></i></div>
+                    <h3><span data-i18n="projects.caisse.title">Gestion de Caisse</span></h3><p data-i18n="projects.caisse">Application de gestion de caisse moderne et intuitive pour optimiser les opérations de point de vente.</p><ul class="tech-badges"></ul><span class="project-tag-internal" data-i18n="projects.internal">Projet interne</span>
                 </div>
-                <div class="project-card card" data-reveal data-tilt>
+                <div class="project-card card featured " data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
-                    <div class="project-icon"><i class="fas fa-baby"></i></div>
-                    <h3>KidTrack</h3>
-                    <p data-i18n="projects.kidtrack">Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.</p>
-                    <ul class="tech-badges"><li>Vue.js</li><li>Vite</li></ul>
-                    <a href="https://kid-track.vercel.app" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a class="project-thumb " href="https://srtk.com.tn/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/projects/srtk.webp" alt="SRTK — site web" loading="lazy" width="960" height="600"></a>
+                    <div class="project-body"><span class="featured-tag" data-i18n="projects.featured">Client officiel</span><h3>SRTK</h3><p data-i18n="projects.srtk">Application web dynamique développée pour la Société Régionale de Transport de Sfax (SRTK).</p><ul class="tech-badges"><li>Nuxt.js</li><li>Vue.js</li></ul><a href="https://srtk.com.tn/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a></div>
                 </div>
-                <div class="project-card card" data-reveal data-tilt>
+                <div class="project-card card " data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
-                    <div class="project-icon"><i class="fas fa-bag-shopping"></i></div>
-                    <h3>FashionShop</h3>
-                    <p data-i18n="projects.fashionshop">Boutique de vêtements en ligne : panier, favoris, recherche instantanée, filtres, paiement simulé et suivi de commande.</p>
-                    <ul class="tech-badges"><li>Vue.js</li><li>Vite</li></ul>
-                    <a href="https://chokri-ben-mahjoub-fashion-shop-jbc.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a class="project-thumb " href="https://kanban-taskflow-one.vercel.app/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/projects/taskflow.webp" alt="TaskFlow — tableau Kanban" loading="lazy" width="960" height="600"></a>
+                    <h3>TaskFlow</h3><p data-i18n="projects.taskflow">Tableau Kanban moderne avec drag & drop, tags, sous-tâches, palette de commandes, ajout rapide en langage naturel et tâches récurrentes.</p><ul class="tech-badges"><li>JavaScript</li><li>SortableJS</li></ul><a href="https://kanban-taskflow-one.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card card" data-reveal data-tilt>
+                <div class="project-card card third" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
-                    <div class="project-icon"><i class="fas fa-shirt"></i></div>
-                    <h3>URBN.</h3>
-                    <p data-i18n="projects.urbn">Site e-commerce streetwear au design minimaliste et éditorial : catalogue, fiche produit, panier, tunnel de commande et espace client.</p>
-                    <ul class="tech-badges"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
-                    <a href="https://streetwear-collective.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a class="project-thumb " href="https://kid-track.vercel.app" target="_blank" rel="noopener" tabindex="-1"><img src="assets/projects/kidtrack.webp" alt="KidTrack — plateforme de garderie" loading="lazy" width="960" height="600"></a>
+                    <h3>KidTrack</h3><p data-i18n="projects.kidtrack">Plateforme de gestion de garderie : suivi quotidien des enfants, présences, facturation et communication avec les parents.</p><ul class="tech-badges"><li>Vue.js</li><li>Vite</li></ul><a href="https://kid-track.vercel.app" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card card" data-reveal data-tilt>
+                <div class="project-card card third" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
-                    <div class="project-icon"><i class="fas fa-table-columns"></i></div>
-                    <h3>TaskFlow</h3>
-                    <p data-i18n="projects.taskflow">Tableau Kanban moderne avec drag & drop, tags, sous-tâches, palette de commandes, ajout rapide en langage naturel et tâches récurrentes.</p>
-                    <ul class="tech-badges"><li>JavaScript</li><li>SortableJS</li></ul>
-                    <a href="https://kanban-taskflow-one.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a class="project-thumb " href="https://chokri-ben-mahjoub-fashion-shop-jbc.vercel.app/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/projects/fashionshop.webp" alt="FashionShop — boutique en ligne" loading="lazy" width="960" height="600"></a>
+                    <h3>FashionShop</h3><p data-i18n="projects.fashionshop">Boutique de vêtements en ligne : panier, favoris, recherche instantanée, filtres, paiement simulé et suivi de commande.</p><ul class="tech-badges"><li>Vue.js</li><li>Vite</li></ul><a href="https://chokri-ben-mahjoub-fashion-shop-jbc.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="project-card card" data-reveal data-tilt>
+                <div class="project-card card third" data-reveal data-tilt>
                     <span class="card-spotlight" aria-hidden="true"></span>
-                    <div class="project-icon"><i class="fas fa-screwdriver-wrench"></i></div>
-                    <h3>ORVATEK</h3>
-                    <p data-i18n="projects.orvatek">Application mobile (Flutter + Firebase) de maintenance et SAV avec trois espaces : client, technicien et admin. Suivi du technicien en direct sur carte, devis avec signature, factures PDF, notifications push et trois langues (AR/FR/EN) avec RTL.</p>
-                    <ul class="tech-badges"><li>Flutter</li><li class="fb">Firebase</li><li class="fb">Firestore</li><li class="fb">Cloud Functions</li><li>Riverpod</li></ul>
-                    <a href="https://orvatek-sav.web.app" target="_blank" rel="noopener"><span data-i18n="projects.demo">Voir la démo</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a class="project-thumb " href="https://streetwear-collective.vercel.app/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/projects/urbn.webp" alt="URBN — site e-commerce" loading="lazy" width="960" height="600"></a>
+                    <h3>URBN.</h3><p data-i18n="projects.urbn">Site e-commerce streetwear au design minimaliste et éditorial : catalogue, fiche produit, panier, tunnel de commande et espace client.</p><ul class="tech-badges"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul><a href="https://streetwear-collective.vercel.app/" target="_blank" rel="noopener"><span data-i18n="projects.view">Voir le site</span> <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </section>

@@ -101,6 +101,11 @@ var translations = {
         'projects.urbn': 'Site e-commerce streetwear au design minimaliste et éditorial : catalogue, fiche produit, panier, tunnel de commande et espace client.',
         'projects.taskflow': 'Tableau Kanban moderne avec drag & drop, tags, sous-tâches, palette de commandes, ajout rapide en langage naturel et tâches récurrentes.',
         'projects.orvatek': "Application mobile (Flutter + Firebase) de maintenance et SAV avec trois espaces : client, technicien et admin. Suivi du technicien en direct sur carte, devis avec signature, factures PDF, notifications push et trois langues (AR/FR/EN) avec RTL.",
+        'projects.flagship': 'Projet phare',
+        'home.stat.years': "ans d'expérience",
+        'home.stat.projects': 'projets en ligne',
+        'home.stat.langs': 'langues (AR · FR · EN)',
+        'home.projectsBtn': 'Voir mes projets',
         'projects.demo': 'Voir la démo',
         'projects.view': 'Voir le site',
 
@@ -239,6 +244,11 @@ var translations = {
         'projects.urbn': 'Minimalist, editorial-style streetwear e-commerce site: catalog, product page, cart, checkout flow and customer account.',
         'projects.taskflow': 'Modern Kanban board with drag & drop, tags, subtasks, command palette, natural-language quick add and recurring tasks.',
         'projects.orvatek': 'Mobile maintenance & after-sales app (Flutter + Firebase) with three spaces: customer, technician and admin. Live technician tracking on a map, signed quotes, PDF invoices, push notifications and three languages (AR/FR/EN) with RTL.',
+        'projects.flagship': 'Flagship project',
+        'home.stat.years': "years of experience",
+        'home.stat.projects': 'live projects',
+        'home.stat.langs': 'languages (AR · FR · EN)',
+        'home.projectsBtn': 'View my projects',
         'projects.demo': 'View demo',
         'projects.view': 'View site',
 
@@ -378,6 +388,11 @@ var translations = {
         'projects.urbn': 'موقع تجارة إلكترونية لملابس الشارع بتصميم بسيط وأنيق: كتالوج، صفحة المنتج، سلة، إتمام الطلب وفضاء الحريف.',
         'projects.taskflow': 'لوحة Kanban عصرية مع السحب والإفلات، وسوم، مهام فرعية، لوحة أوامر، إضافة سريعة بلغة طبيعية ومهام متكررة.',
         'projects.orvatek': 'تطبيق موبايل (Flutter + Firebase) للصيانة وخدمة ما بعد البيع بثلاثة فضاءات: حريف وفني ومسؤول. تتبع الفني مباشرة على الخريطة، عروض أسعار بتوقيع، فواتير PDF، إشعارات فورية وثلاث لغات مع دعم RTL.',
+        'projects.flagship': 'مشروع مميز',
+        'home.stat.years': "سنوات من الخبرة",
+        'home.stat.projects': 'مشاريع منشورة',
+        'home.stat.langs': 'لغات (عربية · فرنسية · إنجليزية)',
+        'home.projectsBtn': 'عرض مشاريعي',
         'projects.demo': 'عرض النسخة التجريبية',
         'projects.view': 'زيارة الموقع',
 
@@ -423,6 +438,20 @@ var translations = {
         'form.networkError': 'خطأ في الشبكة، حاول مرة أخرى لاحقًا.'
     }
 };
+
+
+// ---- theme (clair / sombre) ----
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    var btn = document.getElementById('themeToggle');
+    if (btn) btn.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+}
+(function () {
+    var saved = null;
+    try { saved = localStorage.getItem('site-theme'); } catch (e) { /* ignore */ }
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+})();
 
 var currentLang = 'fr';
 var typedInstance = null;
@@ -626,6 +655,17 @@ document.addEventListener('DOMContentLoaded', function () {
         revealEls.forEach(function (el) { observer.observe(el); });
     } else {
         revealEls.forEach(function (el) { el.classList.add('in-view'); });
+    }
+
+    // ---- theme toggle ----
+    var themeToggle = document.getElementById('themeToggle');
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+            try { localStorage.setItem('site-theme', next); } catch (e) { /* ignore */ }
+        });
     }
 
     // ---- language toggle ----
